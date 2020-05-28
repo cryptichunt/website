@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 
+import Navbar from './navbar'
+
 import logo from '../images/gatsby-icon.png'
 
 const Container = styled.header`
@@ -12,7 +14,7 @@ const Container = styled.header`
 const Logo = styled.img`
   max-height: 7vh;
   border-radius: 50%;
-  transform: translateX(-20%);
+  transform: translateX(-20%) translateY(30%);
 `
 
 const Header = ({ siteTitle }) => (
@@ -22,6 +24,8 @@ const Header = ({ siteTitle }) => (
         margin: `0 auto`,
         maxWidth: 960,
         padding: `1rem 1.0875rem`,
+        display: `flex`,
+        alignItems: `center`,
       }}
     >
       <Link
@@ -34,6 +38,7 @@ const Header = ({ siteTitle }) => (
         {/* {siteTitle} */}
         <Logo src={logo} />
       </Link>
+      <Navbar />
     </div>
   </Container>
 )
