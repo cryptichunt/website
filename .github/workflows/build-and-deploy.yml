@@ -21,9 +21,9 @@ jobs:
       - name: Install and Build 🔧
         run: |
           npm i -g npm
+          npm i -g gatsby-cli
           npm run clean
           npm i
-          npm i -g gatsby-cli
           npm run build
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
