@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 import logo from '../images/gatsby-icon.png'
 
 const Container = styled.header`
-  margin-bottom: 1.45rem;
+  /* margin-bottom: 1rem; */
 `
 
 const Logo = styled.img`
@@ -21,21 +21,19 @@ const Header = ({ siteTitle }) => (
       style={{
         margin: `0 auto`,
         maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        padding: `1rem 1.0875rem`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {/* {siteTitle} */}
-          <Logo src={logo} />
-        </Link>
-      </h1>
+      <Link
+        to="/"
+        style={{
+          color: `white`,
+          textDecoration: `none`,
+        }}
+      >
+        {/* {siteTitle} */}
+        <Logo src={logo} />
+      </Link>
     </div>
   </Container>
 )
