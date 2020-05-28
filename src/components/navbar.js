@@ -31,7 +31,7 @@ function Navbar() {
   return (
     <Container>
       <a
-        href="//google.com"
+        href="https://discord.gg/C5Y2CQ5"
         target="_blank"
         style={{ color: 'white', textDecoration: 'none' }}
       >
