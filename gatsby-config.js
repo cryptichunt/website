@@ -21,8 +21,8 @@ module.exports = {
         name: `Cryptocracy`,
         short_name: `Cryptocracy`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#2977f5`,
+        theme_color: `#2977f5`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
