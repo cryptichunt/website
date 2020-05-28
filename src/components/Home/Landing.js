@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import LandingAnimation from './landingAnimation'
+
 const Container = styled.div`
   width: 100%;
   height: 70vh;
@@ -48,7 +50,9 @@ function Landing() {
           Join our Discord to stay updated.
         </Subheading>
       </div>
-      <div></div>
+      <div>
+        <LandingAnimation />
+      </div>
     </Container>
   )
 }
