@@ -43,8 +43,7 @@ function Landing() {
       <div>
         <Heading>Cryptocracy</Heading>
         <Subheading>
-          A cryptic hunt organised by students from D.P.S. Dwarka and D.P.S.
-          R.K. Puram. <br />
+          A cryptic hunt organised by high school students from Delhi.<br />
           Join our Discord to stay updated.
         </Subheading>
       </div>
