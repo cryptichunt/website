@@ -1,7 +1,7 @@
 import React, { useEffect, createRef } from 'react'
 import lottie from 'lottie-web'
 
-import animation from '../../animations/test.json'
+import animation from '../../animations/laptop.json'
 
 function LandingAnimation() {
   let animationContainer = createRef()
