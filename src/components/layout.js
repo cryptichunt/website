@@ -10,6 +10,8 @@ import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
+import SocialItems from './socialItems'
+
 import './fonts.css'
 import './layout.css'
 
@@ -35,7 +37,19 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer>© Cryptocracy {new Date().getFullYear()}</footer>
+        <footer>
+          <SocialItems />
+          {/* <div
+            style={{
+              position: 'absolute',
+              bottom: '10px',
+              // width: '960px',
+              // textAlign: 'center',
+            }}
+          >
+            © Cryptocracy {new Date().getFullYear()}
+          </div> */}
+        </footer>
       </div>
     </>
   )
