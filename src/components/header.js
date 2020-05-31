@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 
 import Navbar from './navbar'
 
-import logo from '../images/gatsby-icon.png'
+import logo from '../images/gatsby-icon.webp'
 
 const Container = styled.header`
   /* margin-bottom: 1rem; */
@@ -36,7 +36,7 @@ const Header = ({ siteTitle }) => (
         }}
       >
         {/* {siteTitle} */}
-        <Logo src={logo} />
+        <Logo src={logo} alt="Cryptocracy" />
       </Link>
       <Navbar />
     </div>

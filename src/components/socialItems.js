@@ -32,7 +32,7 @@ function SocialItems() {
   return (
     <Container>
       {social.map(({ title, href, icon }) => (
-        <A href={href} target="_blank" alt={title}>
+        <A href={href} target="_blank" rel="norefferer" alt={title} key={title}>
           {icon}
         </A>
       ))}

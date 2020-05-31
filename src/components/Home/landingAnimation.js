@@ -4,7 +4,7 @@ import lottie from 'lottie-web'
 import animation from '../../animations/laptop.json'
 
 function LandingAnimation() {
-  let animationContainer = createRef()
+  const animationContainer = createRef()
 
   useEffect(() => {
     const anim = lottie.loadAnimation({
@@ -15,6 +15,7 @@ function LandingAnimation() {
       animationData: animation,
     })
     return () => anim.destroy()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return <div ref={animationContainer} />

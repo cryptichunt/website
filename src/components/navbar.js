@@ -33,6 +33,7 @@ function Navbar() {
       <a
         href="https://discord.gg/C5Y2CQ5"
         target="_blank"
+        rel="noreferrer"
         style={{ color: 'white', textDecoration: 'none' }}
       >
         <Button>Join Discord</Button>
