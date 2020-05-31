@@ -44,6 +44,8 @@ const Button = styled(NavButton)`
   }
 `
 
+//hi
+
 const RegisterForm = () => {
   const { addToast } = useToasts()
   const { handleSubmit, register, errors } = useForm()
