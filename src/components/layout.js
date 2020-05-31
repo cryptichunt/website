@@ -29,6 +29,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
+
       <div
         style={{
           margin: `0 auto`,
@@ -46,7 +47,7 @@ const Layout = ({ children }) => {
               // width: '960px',
               // textAlign: 'center',
             }}
-          >
+            >
             © Cryptocracy {new Date().getFullYear()}
           </div> */}
         </footer>

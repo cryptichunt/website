@@ -11,6 +11,8 @@ const Container = styled.div`
 
   @media screen and (max-width: 768px) {
     max-width: 60vw;
+    transform: translateY(150px);
+    margin-bottom: 3vh;
   }
 `
 

@@ -5,9 +5,11 @@ const Container = styled.div`
   margin-left: auto;
 `
 
-const Button = styled.div`
+export const Button = styled.button`
   font-family: 'Avenir Black';
 
+  border: 0;
+  padding: 0;
   padding: 5px 30px;
   border-radius: 3px;
   color: white;
@@ -20,6 +22,7 @@ const Button = styled.div`
   &:hover {
     box-shadow: 0px 7px 35px #2977f590;
     transform: translateY(-1px);
+    outline: none;
   }
 
   @media screen and (max-width: 768px) {

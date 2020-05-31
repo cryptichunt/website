@@ -1,5 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import { navigate } from '@reach/router'
+
+import { Button } from '../navbar'
 
 import LandingAnimation from './landingAnimation'
 
@@ -20,7 +23,7 @@ const Container = styled.div`
   }
 `
 
-const Heading = styled.div`
+export const Heading = styled.div`
   font-family: 'Avenir Black';
   font-size: 7vh;
   line-height: 7vh;
@@ -45,9 +48,15 @@ function Landing() {
       <div>
         <Heading>Cryptocracy</Heading>
         <Subheading>
-          A cryptic hunt organised by high school students from Delhi.<br />
-          Join our Discord to stay updated.
+          <p>A cryptic hunt organised by high school students from Delhi.</p>
+          <p>
+            Join our Discord to stay updated. Registrations are now live!
+            Register now at the link below. Additional details will be released
+            soon, stay tuned!
+          </p>
+          <p>19th-20th June, 2020.</p>
         </Subheading>
+        <Button onClick={() => navigate('/register')}>Register</Button>
       </div>
       <div>
         <LandingAnimation />
