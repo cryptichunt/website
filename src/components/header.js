@@ -12,7 +12,7 @@ const Container = styled.header`
 `
 
 const Logo = styled.img`
-  max-height: 7vh;
+  max-height: 8vh;
   border-radius: 50%;
   transform: translateX(-20%) translateY(30%);
 `
