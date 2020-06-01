@@ -57,6 +57,7 @@ function Landing() {
           <p>19th-20th June, 2020.</p>
         </Subheading>
         <Button onClick={() => navigate('/register')}>Register</Button>
+        <Button onClick={() => navigate('/about')} style={{ marginLeft:'1em'}}>About</Button>
       </div>
       <div>
         <LandingAnimation />
