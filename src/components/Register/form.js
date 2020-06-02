@@ -59,7 +59,8 @@ const RegisterForm = () => {
   const [submitted, setSubmitted] = useState(false)
 
   const onSubmit = values => {
-    const proxyURL = 'https://cors-anywhere.herokuapp.com/'
+    const proxyURL = 'https://cors-anywhere.someshkar.workers.dev/?'
+
     // console.log({...values, recaptchaResponse:recaptcha})
     fetch(proxyURL + 'https://cryptocracy-reg-api.now.sh', {
       method: 'POST',
