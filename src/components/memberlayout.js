@@ -17,7 +17,6 @@ const AboutBox = styled.div`
     text-align: center;
     position: relative;
     flex: 1;
-    height: 200px;
     flex-basis: 200px;
     &:hover {
         transition: all 0.25s ease;
@@ -34,12 +33,6 @@ const AboutBox = styled.div`
         content: "";
         white-space: pre;
         display: block;
-    } 
-    @media screen and (max-width: 1000px){
-        height: 250px;
-    }
-    @media screen and (max-width: 450px){
-        height: 200px;
     }
 `
 
