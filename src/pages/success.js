@@ -1,8 +1,17 @@
 import React from 'react'
+import styled from 'styled-components'
 import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+
+const A = styled.text`
+  font-weight: 600;
+  &:hover {
+    opacity: 0.8;
+    transition: all 0.25s ease;
+  }
+`
 
 const SuccessPage = () => (
   <Layout>
@@ -15,7 +24,7 @@ const SuccessPage = () => (
       members of our team from whom you can expect a punctual reply from on
       Discord.
     </p>
-    <p>More details will be released soon.</p>
+    <p><Link to="/format" style={{ textDecoration:'none', color:'inherit' }}><A>Click here</A></Link> for more details regarding the event.</p>
   </Layout>
 )
 

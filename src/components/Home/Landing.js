@@ -51,8 +51,7 @@ function Landing() {
           <p>A cryptic hunt organised by high school students from Delhi.</p>
           <p>
             Join our Discord to stay updated. Registrations are now live!
-            Register now at the link below. Additional details will be released
-            soon, stay tuned!
+            Register now at the link below. 
           </p>
           <p>19th-20th June, 2020.</p>
         </Subheading>
