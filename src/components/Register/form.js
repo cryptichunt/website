@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import Recaptcha from 'react-google-recaptcha'
+import Loader from 'react-loader-spinner'
 
+import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 import { navigate } from '@reach/router'
 import { useForm } from 'react-hook-form'
 import { useToasts } from 'react-toast-notifications'
@@ -44,19 +46,27 @@ const Button = styled(NavButton)`
   }
 `
 
+const Info = styled.text`
+  font-size: 0.8em;
+  margin: 10px 0 0 0;
+`
+
 const RegisterForm = () => {
   const { addToast } = useToasts()
   const { handleSubmit, register, errors } = useForm()
+  const [recaptcha, setRecaptcha] = useState('')
+
+  const [submitted, setSubmitted] = useState(false)
 
   const onSubmit = values => {
     const proxyURL = 'https://cors-anywhere.herokuapp.com/'
-
+    // console.log({...values, recaptchaResponse:recaptcha})
     fetch(proxyURL + 'https://cryptocracy-reg-api.now.sh', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(values),
+      body: JSON.stringify({ ...values, recaptchaResponse: recaptcha }),
     })
       .then(resp => resp.json())
       .then(res => {
@@ -109,15 +119,15 @@ const RegisterForm = () => {
 
         <Input
           name="discord"
-          placeholder="Discord ID"
+          placeholder="Discord ID (username#tag)"
           ref={register()}
-          // ref={register({
-          //   required: 'Required',
-          //   pattern: {
-          //     value: /^((.+?)#\d{4})/,
-          //     message: 'Invalid Discord username',
-          //   },
-          // })}
+          ref={register({
+            required: 'Required',
+            pattern: {
+              value: /^((.+?)#\d{4})/,
+              message: 'Invalid Discord username',
+            },
+          })}
         />
         <Error>{errors.discord && errors.discord.message}</Error>
 
@@ -137,13 +147,32 @@ const RegisterForm = () => {
           })}
         />
         <Error>{errors.password && errors.password.message}</Error>
-
-        <Recaptcha
-          style={{ margin: '10px 0' }}
-          sitekey="6LcMqP4UAAAAAHPJgLnbWmMh1Y_dVSFgbTHTiT2K"
-        />
-
-        <Button type="submit">Submit</Button>
+        <text style={{ marginTop: '10px' }}>
+          <Recaptcha
+            sitekey="6LcMqP4UAAAAAHPJgLnbWmMh1Y_dVSFgbTHTiT2K"
+            onChange={val => setRecaptcha(val)}
+          />
+        </text>
+        <Info>
+          Please give upto 15 seconds for the registration to get validated.
+          <br /> If the unresponsiveness persists, re-click the submit button.
+          <br /> We apoligise for the inconvenience.
+        </Info>
+        <Button type="submit" onClick={() => setSubmitted(!submitted)}>
+          {submitted ? (
+            <Loader
+              type="Bars"
+              color="#fff"
+              height={'20px'}
+              width={'20px'}
+              style={{
+                marginTop: '8.5px',
+              }}
+            />
+          ) : (
+            'Submit'
+          )}
+        </Button>
       </Form>
     </div>
   )

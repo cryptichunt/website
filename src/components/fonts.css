@@ -1,24 +1,29 @@
 @font-face {
+  font-display: swap;
   font-family: 'Avenir';
   src: url('/fonts/Avenir/Avenir-Book.ttf') format('truetype');
 }
 
 @font-face {
+  font-display: swap;
   font-family: 'Avenir Light';
   src: url('/fonts/Avenir/Avenir-Light.ttf') format('truetype');
 }
 
 @font-face {
+  font-display: swap;
   font-family: 'Avenir Medium';
   src: url('/fonts/Avenir/Avenir-Medium.ttf') format('truetype');
 }
 
 @font-face {
+  font-display: swap;
   font-family: 'Avenir Heavy';
   src: url('/fonts/Avenir/Avenir-Heavy.ttf') format('truetype');
 }
 
 @font-face {
+  font-display: swap;
   font-family: 'Avenir Black';
   src: url('/fonts/Avenir/Avenir-Black.ttf') format('truetype');
 }
