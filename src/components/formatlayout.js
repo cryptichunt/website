@@ -2,11 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 
-// import '../components/format.css'
 import clitext from '../../data/clitext'
 import SEO from '../components/seo'
 
-const Main = styled.div`
+const Main = styled.html`
     font-family: 'Ubuntu Mono', monospace;
     padding-top: 50px;
     color: black;
@@ -42,27 +41,25 @@ const Blinking = styled.span`
 
 const FormatLayout = () => (
     <Main>
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap'')
-        </style>
-        <SEO title="Rules & Format" />
+        <style> @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap')</style>
+         <SEO title="Rules & Format" />
         <Terminal>
-            {clitext.map(({ command, text, commandText, date }) => (
-                <div>
-                    <p style={{ margin:'0'}}>
-                        <Tag>[villager@archlinux ~]$ </Tag>
-                        <text>{command}</text><br />
-                    </p>
-                    {commandText}
-                    {date}
-                    <text>{text}</text>
-                </div>
-            ))}
-            <p style={{ margin:'0'}}>
-                <Tag>[villager@archlinux ~]$ </Tag>
-                <Link to="/" style={{ textDecoration:'none', color:'inherit' }}>cd Home<Blinking><text class="blinking">|</text></Blinking></Link>
-            </p>
-        </Terminal>
+                {clitext.map(({ command, text, commandText, date }) => (
+                    <div>
+                        <p style={{ margin:'0'}}>
+                            <Tag>[villager@archlinux ~]$ </Tag>
+                            <text>{command}</text><br />
+                        </p>
+                        {commandText}
+                        {date}
+                        <text>{text}</text>
+                    </div>
+                ))}
+                <p style={{ margin:'0'}}>
+                    <Tag>[villager@archlinux ~]$ </Tag>
+                    <Link to="/" style={{ textDecoration:'none', color:'inherit' }}>cd Home<Blinking><text class="blinking">|</text></Blinking></Link>
+                </p>
+            </Terminal>
     </Main>
 )
 
