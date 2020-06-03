@@ -59,6 +59,8 @@ const RegisterForm = () => {
   const [submitted, setSubmitted] = useState(false)
 
   const onSubmit = values => {
+    if (this.state.isSubmitting) return
+    this.setState({isSubmitting: true})
     // const proxyURL = 'https://cors-anywhere.someshkar.workers.dev/?'
     //const proxyURL = 'https://cors.someshkar.workers.dev/?'
     // console.log({...values, recaptchaResponse:recaptcha})
@@ -81,6 +83,8 @@ const RegisterForm = () => {
 
         if (res.status === 'success') {
           navigate('/success')
+        } else {
+          this.setState({isSubmitting:false})
         }
       })
   }
