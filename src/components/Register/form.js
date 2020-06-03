@@ -60,9 +60,10 @@ const RegisterForm = () => {
 
   const onSubmit = values => {
     // const proxyURL = 'https://cors-anywhere.someshkar.workers.dev/?'
-    const proxyURL = 'https://cors.someshkar.workers.dev/?'
+    //const proxyURL = 'https://cors.someshkar.workers.dev/?'
     // console.log({...values, recaptchaResponse:recaptcha})
-    fetch(proxyURL + 'https://cryptocracy-reg-api.now.sh', {
+    
+    fetch('https://api.cryptichunt.com', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
