@@ -148,6 +148,15 @@ const RegisterForm = () => {
           })}
         />
         <Error>{errors.password && errors.password.message}</Error>
+
+        <Input
+          name="referralUsername"
+          type="referralUsername"
+          placeholder="Referred by (username) (not required)"
+          ref={register()}
+        />
+        <Error>{errors.referralUsername && errors.referralUsername.message}</Error>
+
         <text style={{ marginTop: '10px' }}>
           <Recaptcha
             sitekey="6LcMqP4UAAAAAHPJgLnbWmMh1Y_dVSFgbTHTiT2K"
