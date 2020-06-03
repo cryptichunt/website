@@ -168,7 +168,7 @@ const RegisterForm = () => {
         <Info>
           Please give upto 15 seconds for the registration to get validated.
           <br /> If the unresponsiveness persists, re-click the submit button.
-          <br /> We apoligise for the inconvenience.
+          <br /> We apologise for the inconvenience.
         </Info>
         <Button type="submit" onClick={() => setSubmitted(!submitted)}>
           {submitted ? (
