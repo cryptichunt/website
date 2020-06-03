@@ -108,6 +108,7 @@ const RegisterForm = () => {
         <Input
           name="email"
           placeholder="Email address"
+          type="email"
           ref={register({
             required: 'Required',
             pattern: {
@@ -151,7 +152,7 @@ const RegisterForm = () => {
 
         <Input
           name="referralUsername"
-          type="referralUsername"
+          type="text"
           placeholder="Referred by (username) (not required)"
           ref={register()}
         />
