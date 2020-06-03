@@ -12,8 +12,13 @@ export default [
         text: 'Cryptocracy will start on the 19th of June at 12:00:00 AM IST and will end on 20th June at 11:59:59 PM IST.'
     },
     {
-        command: 'sudo cat day-two-rule.txt',
+        date: <text>Thu Jun 04 00:00:01 IST 2020<br /></text>,
+        command: 'cat day-two-rule.txt',
+        text: <text>The hunt will be in the form of a board game. Every tile on the board will represent one of 4 things- a level, a tile sharing a piece of information related to the overlying story (the story will be released in a few days), one of the 4 unique corners or a random chance tile. Further details regarding every tile will be detailed later.<br /></text>,
+    },
+    {
+        command: 'sudo cat day-three-rule.txt',
         commandText: <text>[sudo] password for villager:<br /></text>,
-        text: 'cat: day-two-rule.txt: No such file or directory. Check back tomorrow for the next bit of information.'
-    }
+        text: 'cat: day-three-rule.txt: No such file or directory. Check back tomorrow for the next bit of information.'
+    },
 ] 
