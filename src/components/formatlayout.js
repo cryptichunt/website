@@ -7,8 +7,7 @@ import SEO from '../components/seo'
 
 const Main = styled.html`
     font-family: 'Ubuntu Mono', monospace;
-    padding-top: 50px;
-    color: black;
+    padding: 50px 0px; 
     line-height: 1.25em;
 `
 
@@ -41,8 +40,8 @@ const Blinking = styled.span`
 
 const FormatLayout = () => (
     <Main>
-        <style> @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap')</style>
-         <SEO title="Rules & Format" />
+        <style>@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap')</style>
+        <SEO title="Rules & Format" />
         <Terminal>
                 {clitext.map(({ command, text, commandText, date }) => (
                     <div>

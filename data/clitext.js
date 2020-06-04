@@ -17,8 +17,13 @@ export default [
         text: <text>The hunt will be in the form of a board game. Every tile on the board will represent one of 4 things- a level, a tile sharing a piece of information related to the overlying story (the story will be released in a few days), one of the 4 unique corners or a random chance tile. Further details regarding every tile will be detailed later.<br /></text>,
     },
     {
-        command: 'sudo cat day-three-rule.txt',
+        date: <text>Fri Jun 05 00:07:54 IST 2020<br /></text>,
+        command: 'cat day-three-rule.txt',
+        text: <text>The board will have 77 tiles in total - 8 tiles giving information realting to the story, 45 level tiles, 23 randomised chance tiles, and one final tile related to the story.<br /></text>,
+    },
+    {
+        command: 'sudo cat day-four-rule.txt',
         commandText: <text>[sudo] password for villager:<br /></text>,
-        text: 'cat: day-three-rule.txt: No such file or directory. Check back tomorrow for the next bit of information.'
+        text: 'cat: day-four-rule.txt: No such file or directory. Check back tomorrow for the next bit of information.'
     },
 ] 
