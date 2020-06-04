@@ -28,8 +28,16 @@ module.exports = {
       },
     },
     `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-168595780-1`,
+        head: true,
+        defer: true,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-   // `gatsby-plugin-offline`,
+    // `gatsby-plugin-offline`,
   ],
 }
