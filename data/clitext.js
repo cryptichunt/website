@@ -19,7 +19,7 @@ export default [
     {
         date: <text>Fri Jun 05 00:07:54 IST 2020<br /></text>,
         command: 'cat day-three-rule.txt',
-        text: <text>The board will have 77 tiles in total - 8 tiles giving information realting to the story, 45 level tiles, 23 randomised chance tiles, and one final tile related to the story.<br /></text>,
+        text: <text>The board will have 77 tiles in total - 8 tiles giving information realting to the story, 45 level tiles, 19 randomised chance tiles, 4 unique corners, and one final tile related to the story.<br /></text>,
     },
     {
         command: 'sudo cat day-four-rule.txt',
