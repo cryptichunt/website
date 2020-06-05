@@ -99,9 +99,13 @@ const RegisterForm = () => {
 
         <Input
           name="username"
-          placeholder="Username"
+          placeholder="Username (no spaces)"
           ref={register({
             required: 'Required',
+            pattern :{
+              value: /^\S*$/,
+              message: 'Invalid username (no spaces allowed)'
+            },
           })}
         />
         <Error>{errors.username && errors.username.message}</Error>

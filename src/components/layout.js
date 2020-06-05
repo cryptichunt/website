@@ -27,6 +27,7 @@ const FooterLinks = styled.div`
   }
   @media screen and (max-width:768px){
     transform: translateY(125px);
+    padding-bottom: 30px;
   }
 `
 

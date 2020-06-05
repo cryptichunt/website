@@ -21,6 +21,7 @@ function LeaderboardLayout(props) {
     return (
         <Layout>
             <h1>Leaderboard</h1>
+            <p>Ctrl+F to search the registrations.</p>
             <Table>
                 <tr>
                     <th>Username</th>
