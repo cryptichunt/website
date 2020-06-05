@@ -18,8 +18,9 @@ const AboutBox = styled.div`
     position: relative;
     flex: 1;
     flex-basis: 200px;
+    transition: all 0.25s ease;
+    
     &:hover {
-        transition: all 0.25s ease;
         transform: translateY(-2px)
     } 
     i {
