@@ -55,10 +55,12 @@ const RegisterForm = () => {
   const { addToast } = useToasts()
   const { handleSubmit, register, errors } = useForm()
   const [recaptcha, setRecaptcha] = useState('')
-
+  const [submitting, setSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
 
   const onSubmit = values => {
+    if (submitting) return
+    setSubmitting(true)
     // const proxyURL = 'https://cors-anywhere.someshkar.workers.dev/?'
     //const proxyURL = 'https://cors.someshkar.workers.dev/?'
     // console.log({...values, recaptchaResponse:recaptcha})
@@ -81,6 +83,8 @@ const RegisterForm = () => {
 
         if (res.status === 'success') {
           navigate('/success')
+        } else {
+          setSubmitting(false)
         }
       })
   }
