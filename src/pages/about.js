@@ -19,7 +19,10 @@ const AboutPage = () => (
     <SEO title="About" />
     <h1>About</h1>
     <p>A cryptic hunt is an online multiplayer event that involves players having to follow a trail of leads and clues to get to a question's answer. These answers aren't directly available on the internet, and each question generally takes a great deal of patience and mental prowess to solve.</p>
-    <p><Link to="/format" style={{ textDecoration:'none', color:'inherit' }}><A>Click here</A></Link> for more details regarding the event.</p>
+    <p>
+      <Link to="/format" style={{ textDecoration:'none', color:'inherit' }}><A>Click here</A></Link> for more details regarding the event.
+      <Link to="/leaderboard" style={{ textDecoration:'none', color:'inherit' }}><A> Click here</A></Link> to view the leaderboard.
+    </p>
     <h1>Members</h1>
         <MemberLayout />
   </Layout>

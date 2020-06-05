@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Cryptocracy`,
-    description: `An online cryptic hunt conducted by students of D.P.S. Dwarka and D.P.S. R.K. Puram. Join our official Discord server.`,
-    author: `@someshkar`,
+    description: `An online cryptic hunt conducted by a group of high-school students from the Delhi Tech Circuit. Join our official Discord server.`,
+    author: `@cryptocracy`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

@@ -1,19 +1,34 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
+import { navigate } from '@reach/router'
+import styled from 'styled-components'
 
 import Header from './header'
 import SocialItems from './socialItems'
 
 import './fonts.css'
 import './layout.css'
+
+const FooterLinks = styled.div`
+  font-size: 14px;
+  font-weight: bold;
+  a {
+    padding: 20px 15px 0 0;
+    color: #565656;
+    text-decoration: none;
+    display: inline-block;
+  }
+  a:hover {
+    transition: all 0.2s ease-in;
+    color: #000;
+    cursor: pointer;
+    transform: scale(1.1) translateY(-1px);
+  }
+  @media screen and (max-width:768px){
+    transform: translateY(125px);
+  }
+`
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -40,16 +55,14 @@ const Layout = ({ children }) => {
         <main>{children}</main>
         <footer>
           <SocialItems />
-          {/* <div
-            style={{
-              position: 'absolute',
-              bottom: '10px',
-              // width: '960px',
-              // textAlign: 'center',
-            }}
-            >
-            © Cryptocracy {new Date().getFullYear()}
-          </div> */}
+          <FooterLinks>
+            <a onClick={() => navigate('/')}>HOME</a>
+            <a href="https://discord.com/invite/C5Y2CQ5">DISCORD</a> 
+            <a onClick={() => navigate('/about')}>ABOUT</a>
+            <a onClick={() => navigate('/register')}>REGISTER</a>
+            <a onClick={() => navigate('/leaderboard')}>LEADERBOARD</a>
+            <a onClick={() => navigate('/format')}>FORMAT</a>
+          </FooterLinks>
         </footer>
       </div>
     </>

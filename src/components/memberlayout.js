@@ -20,7 +20,7 @@ const AboutBox = styled.div`
     flex-basis: 200px;
     &:hover {
         transition: all 0.25s ease;
-        transform: translateY(-2px)
+        transform: translateY(-2px);
     } 
     i {
         font-size: 0.9em;
