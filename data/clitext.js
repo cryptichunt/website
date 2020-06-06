@@ -29,7 +29,7 @@ export default [
     {
         date: <text>Sun Jun 07 00:04:13 IST 2020<br /></text>,
         command: 'cat day-five-rule.txt',
-        text: <text>Answers will be one word and in lowercase. Numbers and special characters will be allowed.</text>,
+        text: <text>Answers will be lowercase, alphanumeric strings. Special characters are allowed.</text>,
     },
     {
         command: 'sudo cat day-six-rule.txt',
