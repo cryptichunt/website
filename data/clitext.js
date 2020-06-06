@@ -24,11 +24,16 @@ export default [
     {
         date: <text>Sat Jun 06 00:16:43 IST 2020<br /></text>,
         command: 'cat day-four-rule.txt',
-        text: <text>Your movements, and your fate, will be decided by the roll of a virtual die. There is no cooldown time period on how often you can roll the die, however, you must complete the actions of the tile you are on (eg. solve the level, read the story, finish the random chance tile action/encounter) before you can roll the die again and move on. Tiles that you have visited before become greyed out. You can roll the die again without any delay if you land on a previously visited, greyed out tile.</text>
+        text: <text>Your movements, and your fate, will be decided by the roll of a virtual die. There is no cooldown time period on how often you can roll the die, however, you must complete the actions of the tile you are on (eg. solve the level, read the story, finish the random chance tile action/encounter) before you can roll the die again and move on. Tiles that you have visited before become greyed out. You can roll the die again without any delay if you land on a previously visited, greyed out tile.</text>,
     },
     {
-        command: 'sudo cat day-five-rule.txt',
+        date: <text>Sun Jun 07 00:04:13 IST 2020<br /></text>,
+        command: 'cat day-five-rule.txt',
+        text: <text>Answers will be one word and in lowercase. Numbers and special characters will be allowed.</text>,
+    },
+    {
+        command: 'sudo cat day-six-rule.txt',
         commandText: <text>[sudo] password for villager:<br /></text>,
-        text: 'cat: day-five-rule.txt: No such file or directory. Check back tomorrow for the next bit of information.'
+        text: 'cat: day-six-rule.txt: No such file or directory. Check back tomorrow for the next bit of information.',
     },
 ] 
