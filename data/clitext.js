@@ -32,8 +32,13 @@ export default [
         text: <text>Answers will be lowercase, alphanumeric strings. Special characters are allowed.</text>,
     },
     {
-        command: 'sudo cat day-six-rule.txt',
+        date: <text>Mon Jun 08 00:21:45 IST 2020<br /></text>,
+        command: 'cat day-six-rule.txt',
+        text: <text>You guys ever played Monopoly?</text>,
+    },
+    {
+        command: 'sudo cat day-seven-rule.txt',
         commandText: <text>[sudo] password for villager:<br /></text>,
-        text: 'cat: day-six-rule.txt: No such file or directory. Check back tomorrow for the next bit of information.',
+        text: 'cat: day-seven-rule.txt: No such file or directory. Check back tomorrow for the next bit of information.',
     },
 ] 
