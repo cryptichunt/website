@@ -37,8 +37,13 @@ export default [
         text: <text>You guys ever played Monopoly?</text>,
     },
     {
-        command: 'sudo cat day-seven-rule.txt',
+        date: <text>Tue Jun 09 00:12:39 IST 2020<br /></text>,
+        command: 'cat day-seven-rule.txt',
+        text: <text>Lead confirmations will remain open at all times. Participants can message any discord admin to get their leads confirmed.</text>,
+    },
+    {
+        command: 'sudo cat day-eight-rule.txt',
         commandText: <text>[sudo] password for villager:<br /></text>,
-        text: 'cat: day-seven-rule.txt: No such file or directory. Check back tomorrow for the next bit of information.',
+        text: 'cat: day-eight-rule.txt: No such file or directory. Check back tomorrow for the next bit of information.',
     },
 ] 
