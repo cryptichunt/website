@@ -65,6 +65,7 @@ const RegisterForm = () => {
     //const proxyURL = 'https://cors.someshkar.workers.dev/?'
     // console.log({...values, recaptchaResponse:recaptcha})
     
+    // hlo kaneki
     fetch('https://api.cryptichunt.com', {
       method: 'POST',
       headers: {
