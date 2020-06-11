@@ -41,18 +41,20 @@ const FooterLinks = styled.div`
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
+
   a {
     padding: 20px 15px 0 0;
     color: #565656;
     text-decoration: none;
     display: inline-block;
   }
+
   a:hover {
     transition: all 0.2s ease-in;
     color: #000;
     cursor: pointer;
-    transform: scale(1.1) translateY(-1px);
   }
+
   @media screen and (max-width: 768px) {
     transform: translateY(125px);
     padding-bottom: 30px;

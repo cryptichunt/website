@@ -39,6 +39,6 @@ export default [
   {
     title: 'Email',
     icon: <IoIosMail />,
-    href: 'mailto:info@cryptichunt.com',
+    href: 'mailto:admin@cryptichunt.com',
   },
 ]
