@@ -143,7 +143,27 @@ export default [
     ),
   },
   {
-    command: 'sudo cat day-ten-rule.txt',
+    date: (
+      <text>
+        Fri Jun 12 00:48:17 IST 2020
+        <br />
+      </text>
+    ),
+    command: 'cat day-ten-rule.txt',
+    text: (
+      <text>
+        The Bounty System: a person can turn in the participant(s) who've 
+        contacted them for answers if they have sufficient proof of teaming.
+        For each person you report you will get the bounty that was on that player's head.
+        The exact amount you will recieve will be revealed along with the rest of the game economy. 
+        A person can report the guilty individual within 30 minutes of them last approaching the player for answers.
+        Methods of reporting including screenshots of conversations, audio recordings of calls, etc. 
+        Also, we're proud to announce that our official sponsor is IvyAchievement! Check them out <a href="https://www.ivyachievement.com/">here</a>. 
+    </text>
+    ),
+  },
+  {
+    command: 'sudo cat day-eleven-rule.txt',
     commandText: (
       <text>
         [sudo] password for villager:
@@ -151,6 +171,6 @@ export default [
       </text>
     ),
     text:
-      'cat: day-ten-rule.txt: No such file or directory. Check back tomorrow for the next bit of information.',
+      'cat: day-eleven-rule.txt: No such file or directory. Check back tomorrow for the next bit of information.',
   },
 ]
