@@ -64,7 +64,7 @@ const RegisterForm = () => {
     // const proxyURL = 'https://cors-anywhere.someshkar.workers.dev/?'
     //const proxyURL = 'https://cors.someshkar.workers.dev/?'
     // console.log({...values, recaptchaResponse:recaptcha})
-    
+
     fetch('https://api.cryptichunt.com', {
       method: 'POST',
       headers: {
@@ -106,9 +106,9 @@ const RegisterForm = () => {
           placeholder="Username (no spaces)"
           ref={register({
             required: 'Required',
-            pattern :{
+            pattern: {
               value: /^\S*$/,
-              message: 'Invalid username (no spaces allowed)'
+              message: 'Invalid username (no spaces allowed)',
             },
           })}
         />
@@ -131,7 +131,6 @@ const RegisterForm = () => {
         <Input
           name="discord"
           placeholder="Discord ID (username#tag)"
-          ref={register()}
           ref={register({
             required: 'Required',
             pattern: {
@@ -165,7 +164,9 @@ const RegisterForm = () => {
           placeholder="Referred by (username) (not required)"
           ref={register()}
         />
-        <Error>{errors.referralUsername && errors.referralUsername.message}</Error>
+        <Error>
+          {errors.referralUsername && errors.referralUsername.message}
+        </Error>
 
         <text style={{ marginTop: '10px' }}>
           <Recaptcha
