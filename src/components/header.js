@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 
 import Navbar from './navbar'
 
-import logo from '../images/gatsby-icon.webp'
+import logo from '../images/crypticlogo.svg'
 
 const Container = styled.header`
   /* margin-bottom: 1rem; */

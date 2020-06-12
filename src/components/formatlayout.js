@@ -18,6 +18,7 @@ const Terminal = styled.div`
         transition: all 0.25s ease;
         width: 75%;
     }
+    color: #D3D3D3;
 `
 
 const Tag = styled.text`
@@ -30,11 +31,11 @@ const Blinking = styled.span`
     animation:blinkingText 1.2s infinite;
     } 
     @keyframes blinkingText {
-        0% {color: black;}
-        49% {color: black;}
+        0% {color: #D3D3D3;}
+        49% {color: #D3D3D3;}
         60% {color: transparent;}
         99% {color:transparent;}
-        100% {color: black;}
+        100% {color: #D3D3D3;}
     }
 `
 

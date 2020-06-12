@@ -17,7 +17,7 @@ const Container = styled.div`
 `
 
 const A = styled.a`
-  color: #565656;
+  color: #D3D3D3;
   text-decoration: none;
   font-size: 25px;
   transition: all 0.2s ease-in;

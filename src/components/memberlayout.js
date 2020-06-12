@@ -11,7 +11,7 @@ const AboutContainer = styled.div`
 `
 
 const AboutBox = styled.div`
-    border: 2px #f5f5f5 solid;
+    border: 2px #BCB8B1 solid;
     padding: 20px;
     margin: 0 10px 20px 0;
     text-align: center;
@@ -22,6 +22,9 @@ const AboutBox = styled.div`
         transition: all 0.25s ease;
         transform: translateY(-2px);
     } 
+    info {
+        color: #FFFFFA;
+    }
     i {
         font-size: 0.9em;
         white-space: pre;
@@ -40,6 +43,7 @@ const Title = styled.div`
     font-size: 1.15em;
     font-weight: 600;
     margin: 20px;
+    color: #E95420;
 ` 
 
 const ButtonDiscord = styled.button`
@@ -48,10 +52,12 @@ const ButtonDiscord = styled.button`
     margin-top: 10px;
     border: 0;
     border-radius: 3px;
-    color: white;
-    background: rgba(0,0,0,0.8);
+    /* color: white; */
+    /* background: rgba(0,0,0,0.8); */
     font-size: 0.8rem;
     cursor: pointer;
+    color: #23272a;
+    background: #BCB8B1;
     transition: transform 0.3s ease;
     &:hover {
         transform: translateY(-2px);

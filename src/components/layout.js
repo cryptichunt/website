@@ -44,7 +44,8 @@ const FooterLinks = styled.div`
 
   a {
     padding: 20px 15px 0 0;
-    color: #565656;
+    /* color: #AEA79F; */
+    color: #D3D3D3;
     text-decoration: none;
     display: inline-block;
   }

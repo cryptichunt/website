@@ -11,16 +11,18 @@ export const Button = styled.button`
   border: 0;
   padding: 0;
   padding: 5px 30px;
+  margin-top: 2vh;
   border-radius: 3px;
-  color: white;
-  background: #2977f5;
-  box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.25);
+  color: #23272a;
+  /* background: #2977f5; */
+  background: #BCB8B1;
+  /* box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.25); */
   font-size: 0.8rem;
   cursor: pointer;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 
   &:hover {
-    box-shadow: 0px 7px 35px #2977f590;
+    /* box-shadow: 0px 7px 35px #2977f590; */
     transform: translateY(-1px);
     outline: none;
   }

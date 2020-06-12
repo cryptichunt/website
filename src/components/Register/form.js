@@ -19,11 +19,15 @@ const Form = styled.form`
 const Input = styled.input`
   max-width: 45%;
   padding: 15px 20px;
-  border-radius: 5px;
+  border: 2px solid #545454;
+  border-radius: 3px;
   outline: none;
-  border: 1px solid #d0d0d0;
+  color: #D3D3D3;
   margin: 10px 0;
-
+  background: #23272a;
+  &::placeholder {
+    color: #686d71;
+  }
   @media screen and (max-width: 768px) {
     max-width: 100%;
   }
@@ -44,11 +48,6 @@ const Button = styled(NavButton)`
   @media screen and (max-width: 768px) {
     width: 30%;
   }
-`
-
-const Info = styled.text`
-  font-size: 0.8em;
-  margin: 10px 0 0 0;
 `
 
 const RegisterForm = () => {
@@ -172,13 +171,9 @@ const RegisterForm = () => {
           <Recaptcha
             sitekey="6LcMqP4UAAAAAHPJgLnbWmMh1Y_dVSFgbTHTiT2K"
             onChange={val => setRecaptcha(val)}
+            theme= "dark"
           />
         </text>
-        <Info>
-          Please give upto 15 seconds for the registration to get validated.
-          <br /> If the unresponsiveness persists, re-click the submit button.
-          <br /> We apologize for the inconvenience.
-        </Info>
         <Button type="submit" onClick={() => setSubmitted(!submitted)}>
           {submitted ? (
             <Loader

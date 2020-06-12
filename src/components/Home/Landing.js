@@ -12,7 +12,7 @@ const Container = styled.div`
   /* background: green; */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-
+  color: white;
   padding: 18vh 0;
 
   @media screen and (max-width: 768px) {
@@ -27,18 +27,21 @@ export const Heading = styled.div`
   font-family: 'Avenir Black';
   font-size: 7vh;
   line-height: 7vh;
+  color: #E95420;
 `
 
 const Subheading = styled.div`
   font-family: 'Avenir Medium';
-  font-size: 2vh;
+  font-size: 20px;
   margin-top: 2vh;
+  /* color: #FFFFFA; */
+  color: #D3D3D3;
 
   padding-right: 5rem;
 
   @media screen and (max-width: 768px) {
     padding-right: 1rem;
-    font-size: 2.5vh;
+    font-size: 18px;
   }
 `
 
@@ -58,9 +61,9 @@ function Landing() {
         <Button onClick={() => navigate('/register')}>Register</Button>
         <Button onClick={() => navigate('/about')} style={{ marginLeft:'1em'}}>About</Button>
       </div>
-      <div>
+      {/* <div>
         <LandingAnimation />
-      </div>
+      </div> */}
     </Container>
   )
 }

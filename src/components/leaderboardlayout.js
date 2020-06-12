@@ -11,6 +11,10 @@ const Table = styled.table`
     }
 `
 
+const Leaderboard = styled.div`
+    color: #D3D3D3;
+`
+
 function LeaderboardLayout(props) {
     const [fetchedData, setFetchedData] = useState([])  
     useEffect(() => {
@@ -20,12 +24,15 @@ function LeaderboardLayout(props) {
     }, [])    
     return (
         <Layout>
-            <h1>Leaderboard</h1>
+            <Leaderboard>
+            <h1 style={{
+                color: '#E95420'
+            }}>Leaderboard</h1>
             <p>Ctrl+F to search the registrations.</p>
             <Table>
                 <tr>
-                    <th>Username</th>
-                    <th>Score</th>
+                    <th>USERNAME</th>
+                    <th>SCORE</th>
                 </tr>
                 {fetchedData.map(({ username, points }) => (
                     <tr>
@@ -34,6 +41,7 @@ function LeaderboardLayout(props) {
                     </tr>
                 ))}
             </Table>
+            </Leaderboard>
         </Layout>
     )
 }

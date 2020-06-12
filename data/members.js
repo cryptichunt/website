@@ -2,7 +2,7 @@ export default [
   {
       name: 'Angad Singh',
       post: 'Priest',
-      email: 'mailto:angadsingh567890@gmail.com',
+      email: 'mailto:mail@angad.dev',
   },
   {
       name: 'Somesh Kar',

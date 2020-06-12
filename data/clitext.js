@@ -158,12 +158,26 @@ export default [
         The exact amount you will receive will be revealed along with the rest of the game economy. 
         A person can report the guilty individual within 30 minutes of them last approaching the player for answers.
         Methods of reporting including screenshots of conversations, audio recordings of calls, etc. 
-        Also, we're proud to announce that our official sponsor is IvyAchievement! Check them out <a href="https://www.ivyachievement.com/">here</a>. 
+        Also, we're proud to announce that our official sponsor is IvyAchievement! Check them out <a href="https://www.ivyachievement.com/" style={{ color: 'inherit' }}>here</a>. 
     </text>
     ),
   },
   {
-    command: 'sudo cat day-eleven-rule.txt',
+    date: (
+      <text>
+        Sat Jun 13 00:39:38 IST 2020
+        <br />
+      </text>
+    ),
+    command: 'cat day-eleven-rule.txt',
+    text: (
+      <text>
+        Prizes have been revealed, check them out <a href="https://www.instagram.com/p/CBWK36Hl995/?igshid=kws9jeec5w0j" style={{ color: 'inherit' }}>here</a>.
+      </text>
+    )
+  },
+  {
+    command: 'sudo cat day-twelve-rule.txt',
     commandText: (
       <text>
         [sudo] password for villager:
@@ -171,6 +185,6 @@ export default [
       </text>
     ),
     text:
-      'cat: day-eleven-rule.txt: No such file or directory. Check back tomorrow for the next bit of information.',
+      'cat: day-twelve-rule.txt: No such file or directory. Check back tomorrow for the next bit of information.',
   },
 ]
