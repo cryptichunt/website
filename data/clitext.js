@@ -155,7 +155,7 @@ export default [
         The Bounty System: a person can turn in the participant(s) who've 
         contacted them for answers if they have sufficient proof of teaming.
         For each person you report you will get the bounty that was on that player's head.
-        The exact amount you will recieve will be revealed along with the rest of the game economy. 
+        The exact amount you will receive will be revealed along with the rest of the game economy. 
         A person can report the guilty individual within 30 minutes of them last approaching the player for answers.
         Methods of reporting including screenshots of conversations, audio recordings of calls, etc. 
         Also, we're proud to announce that our official sponsor is IvyAchievement! Check them out <a href="https://www.ivyachievement.com/">here</a>. 
