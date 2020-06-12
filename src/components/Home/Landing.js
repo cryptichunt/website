@@ -22,6 +22,9 @@ const Container = styled.div`
     height: 75vh;
     padding: 5vh 0;
   }
+  @media screen and (max-height: 768px) {
+    height: 90vh;
+  }
 `
 
 export const Heading = styled.div`
@@ -56,7 +59,9 @@ const Ivy = styled.img`
   }
 `
 
-const A = styled.text`
+const A = styled.a`
+  text-decoration: inherit;
+  color: inherit;
   font-weight: 600;
   &:hover {
     opacity: 0.8;
@@ -76,13 +81,14 @@ function Landing() {
             Join our Discord to stay updated. Registrations are now live!
             Register now at the link below. 
           </p>
-          <p>Check out the prizes <A target="_blank" href="https://www.instagram.com/p/CBWK36Hl995/?igshid=kws9jeec5w0j">here!</A></p>
+          <p>Check out the prizes <A target="_blank" href="https://www.instagram.com/p/CBWK36Hl995/?igshid=kws9jeec5w0j">here!</A>
+          <br /> We are officialy sponsored by <A target="_blank" href="https://www.ivyachievement.com/">IvyAcheivement.</A></p>
           <p>19th-20th June, 2020.</p>
         </Subheading>
         <Button onClick={() => navigate('/register')}>Register</Button>
         <Button onClick={() => navigate('/about')} style={{ marginLeft:'1em'}}>About</Button>
       </div>
-      <OutboundLink href="https://www.ivyachievement.com/" target="_blank">
+      <OutboundLink href="https://www.ivyachievement.com/" target="_blank" style={{ opacity: '80%' }}>
         <Ivy src={ivy} alt="IvyAcheivement" />
       </OutboundLink>
     </Container>
