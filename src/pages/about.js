@@ -6,7 +6,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import MemberLayout from '../components/memberlayout'
 
-const A = styled.text`
+export const A = styled.text`
   font-weight: 600;
   &:hover {
     opacity: 0.8;
