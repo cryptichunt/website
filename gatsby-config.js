@@ -22,10 +22,10 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#23272A`,
+        theme_color: `#23272A`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, 
+        icon: `src/images/gatsby-icon.png`,
       },
     },
     {
@@ -33,10 +33,10 @@ module.exports = {
       options: {
         fonts: [
           `Montserrat`,
-          `source sans pro\:400,500,600` // you can also specify font weights and styles
+          `source sans pro\:400,500,600`, // you can also specify font weights and styles
         ],
-        display: 'swap'
-      }
+        display: 'swap',
+      },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
