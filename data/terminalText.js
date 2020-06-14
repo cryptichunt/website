@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 
 export default [
   {
@@ -8,9 +8,9 @@ export default [
         <br />
       </text>
     ),
-    command: 'cat explanation.txt',
+    command: "cat explanation.txt",
     text:
-      'Greetings! Keeping in line with the cryptic nature of the event, and the CTF influence, the format and the rules of the event will be revealed in the form of a rolling release. 14 points will be released over the next 14 days. Check back every day and gain a new piece of information regarding the event. Happy hunting.',
+      "Greetings! Keeping in line with the cryptic nature of the event, and the CTF influence, the format and the rules of the event will be revealed in the form of a rolling release. 14 points will be released over the next 14 days. Check back every day and gain a new piece of information regarding the event. Happy hunting.",
   },
   {
     date: (
@@ -19,9 +19,9 @@ export default [
         <br />
       </text>
     ),
-    command: 'cat day-one-rule.txt',
+    command: "cat day-one-rule.txt",
     text:
-      'Cryptocracy will start on the 19th of June at 12:00:00 AM IST and will end on 20th June at 11:59:59 PM IST.',
+      "Cryptocracy will start on the 19th of June at 12:00:00 AM IST and will end on 20th June at 11:59:59 PM IST.",
   },
   {
     date: (
@@ -30,7 +30,7 @@ export default [
         <br />
       </text>
     ),
-    command: 'cat day-two-rule.txt',
+    command: "cat day-two-rule.txt",
     text: (
       <text>
         The hunt will be in the form of a board game. Every tile on the board
@@ -49,7 +49,7 @@ export default [
         <br />
       </text>
     ),
-    command: 'cat day-three-rule.txt',
+    command: "cat day-three-rule.txt",
     text: (
       <text>
         The board will have 81 tiles in total - 8 tiles giving information
@@ -66,7 +66,7 @@ export default [
         <br />
       </text>
     ),
-    command: 'cat day-four-rule.txt',
+    command: "cat day-four-rule.txt",
     text: (
       <text>
         Your movements, and your fate, will be decided by the roll of a virtual
@@ -87,7 +87,7 @@ export default [
         <br />
       </text>
     ),
-    command: 'cat day-five-rule.txt',
+    command: "cat day-five-rule.txt",
     text: (
       <text>
         Answers will be lowercase, alphanumeric strings. Special characters are
@@ -102,7 +102,7 @@ export default [
         <br />
       </text>
     ),
-    command: 'cat day-six-rule.txt',
+    command: "cat day-six-rule.txt",
     text: <text>You guys ever played Monopoly?</text>,
   },
   {
@@ -112,7 +112,7 @@ export default [
         <br />
       </text>
     ),
-    command: 'cat day-seven-rule.txt',
+    command: "cat day-seven-rule.txt",
     text: (
       <text>
         Lead confirmations will remain open at all times. Participants can
@@ -127,7 +127,7 @@ export default [
         <br />
       </text>
     ),
-    command: 'cat day-nine-rule.txt',
+    command: "cat day-nine-rule.txt",
     text: (
       <text>
         Teaming or forming alliances: now this has always been a controversial
@@ -149,17 +149,23 @@ export default [
         <br />
       </text>
     ),
-    command: 'cat day-ten-rule.txt',
+    command: "cat day-ten-rule.txt",
     text: (
       <text>
-        The Bounty System: a person can turn in the participant(s) who've 
-        contacted them for answers if they have sufficient proof of teaming.
-        For each person you report you will get the bounty that was on that player's head.
-        The exact amount you will receive will be revealed along with the rest of the game economy. 
-        A person can report the guilty individual within 30 minutes of them last approaching the player for answers.
-        Methods of reporting including screenshots of conversations, audio recordings of calls, etc. 
-        Also, we're proud to announce that our official sponsor is IvyAchievement! Check them out <a href="https://www.ivyachievement.com/" style={{ color: 'inherit' }}>here</a>. 
-    </text>
+        The Bounty System: a person can turn in the participant(s) who've
+        contacted them for answers if they have sufficient proof of teaming. For
+        each person you report you will get the bounty that was on that player's
+        head. The exact amount you will receive will be revealed along with the
+        rest of the game economy. A person can report the guilty individual
+        within 30 minutes of them last approaching the player for answers.
+        Methods of reporting including screenshots of conversations, audio
+        recordings of calls, etc. Also, we're proud to announce that our
+        official sponsor is IvyAchievement! Check them out{" "}
+        <a href="https://www.ivyachievement.com/" style={{ color: "inherit" }}>
+          here
+        </a>
+        .
+      </text>
     ),
   },
   {
@@ -169,15 +175,74 @@ export default [
         <br />
       </text>
     ),
-    command: 'cat day-eleven-rule.txt',
+    command: "cat day-eleven-rule.txt",
     text: (
       <text>
-        Prizes have been revealed, check them out <a href="https://www.instagram.com/p/CBWK36Hl995/?igshid=kws9jeec5w0j" style={{ color: 'inherit' }}>here</a>.
+        Prizes have been revealed, check them out{" "}
+        <a
+          href="https://www.instagram.com/p/CBWK36Hl995/?igshid=kws9jeec5w0j"
+          style={{ color: "inherit" }}
+        >
+          here
+        </a>
+        .
       </text>
-    )
+    ),
   },
   {
-    command: 'sudo cat day-twelve-rule.txt',
+    date: (
+      <text>
+        Sun Jun 14 00:13:17 IST 2020
+        <br />
+      </text>
+    ),
+    command: "cat day-twelve-rule.txt",
+    text: (
+      <text>
+        The 4 corners of the map are:
+        <br />
+        1) Bottom-Right is the “GO”, players will collect a small number of
+        points when they pass it, but the amount of points is limited i.e. it
+        gets exhausted after a while so that players cannot keep passing GO and
+        to farm points after they’re done with the levels.
+        <br />
+        2) Bottom-Left is the Jail where players will have to serve their
+        sentence.
+        <br />
+        3) Top-Left is the gate to the enter the inner tiles, you need to have
+        completed a certain number of levels from the outer tiles before you can
+        enter the inner ones.
+        <br />
+        4) Top-Right is a mystery square. It’s contents will get revealed
+        mid-game.
+        <br />
+      </text>
+    ),
+  },
+  {
+    date: (
+      <text>
+        Mon Jun 15 00:01:25 IST 2020
+        <br />
+      </text>
+    ),
+    command: "cat day-thirteen-rule.txt",
+    text: (
+      <text>
+        Our promo video's out, here's a little{" "}
+        <a
+          href="https://www.youtube.com/watch?v=Ne7H5zYWmRo"
+          target="_blank"
+          rel="noreferrer"
+        >
+          "teaser"
+        </a>{" "}
+        for you :wink:
+      </text>
+    ),
+  },
+  {
+    command: "sudo cat day-fourteen-rule.txt",
     commandText: (
       <text>
         [sudo] password for villager:
@@ -185,6 +250,6 @@ export default [
       </text>
     ),
     text:
-      'cat: day-twelve-rule.txt: No such file or directory. Check back tomorrow for the next bit of information.',
+      "cat: day-fourteen-rule.txt: No such file or directory. Check back tomorrow for the next bit of information.",
   },
 ]

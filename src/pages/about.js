@@ -1,47 +1,146 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Link } from 'gatsby'
+import React from "react"
+import { Link } from "gatsby"
+import styled from "styled-components"
 
-import Layout from '../components/layout'
-import SEO from '../components/seo'
-import MemberLayout from '../components/memberlayout'
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+import Member from "../../data/memberInfo"
 
-export const A = styled.text`
-  font-weight: 600;
+const AboutContainer = styled.div`
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+`
+
+const AboutBox = styled.div`
+  border-radius: 5px;
+  background-color: #2f3336;
+  padding: 20px 20px 30px 20px;
+  margin: 0 10px 10px 0;
+  text-align: center;
+  font-size: 24px;
+  position: relative;
+  line-height: 28px;
+  color: #eee;
+  flex: 1;
+  flex-basis: 300px;
   &:hover {
-    opacity: 0.8;
-    transition: all 0.25s ease;
+    transform: translateY(-2px);
+  }
+  info {
+    background-color: transparent;
+  }
+  main {
+    font-size: 19px;
+  }
+  i {
+    font-size: 18px;
+    white-space: pre;
+    background-color: transparent;
+  }
+  main,
+  i {
+    display: inline;
+    background-color: transparent;
+  }
+  main::after,
+  i::after {
+    content: "";
+    white-space: pre;
+    display: block;
   }
 `
-const About = styled.div` 
-  color: #D3D3D3;
-  h1 {
-    color: #E95420;
+
+const Title = styled.div`
+  font-size: 24px;
+  font-weight: 600;
+  margin: 20px;
+  color: #ee3769;
+  background-color: transparent;
+`
+
+const ButtonContact = styled.button`
+  padding: 10px 20px;
+  font-size: 18px;
+  margin-top: 16px;
+  border: 0;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #ee3769;
+`
+
+const About = styled.div`
+  padding: 0;
+  margin: 0;
+  h2 {
+    margin-bottom: 24px;
+  }
+  @media screen and (max-width: 768px) {
+    h2.abouttitle {
+      margin-top: 2em;
+    }
   }
 `
 
 const AboutPage = () => (
   <Layout>
-    <SEO title="About" />
     <About>
-      <h1>About</h1>
-      <p>A cryptic hunt is an online multiplayer event that involves players having to follow a trail of leads and clues to get to a question's answer. These answers aren't directly available on the internet, and each question generally takes a great deal of patience and mental prowess to solve.</p>
+      <SEO title="About" />
+      <h2 class="abouttitle">About</h2>
       <p>
-        <Link to="/format" style={{ textDecoration:'none', color:'inherit' }}><A>Click here</A></Link> for more details regarding the event.
-        <Link to="/leaderboard" style={{ textDecoration:'none', color:'inherit' }}><A> Click here</A></Link> to view the leaderboard.
+        A cryptic hunt is an online multiplayer event that involves players
+        having to follow a trail of leads and clues to get to a question's
+        answer. These answers aren't directly available on the internet, and
+        each question generally takes a great deal of patience and mental
+        prowess to solve.
       </p>
-      <h1>Prizes</h1>
       <p>
-          <b>1st -</b> ₹20,000*<br />
-          <b>2nd -</b> ₹15,000*<br />
-          <b>3rd -</b> ₹10,000*<br />
-          <b>4th to 15th -</b> ₹1,000* each<br />
+        <b>
+          <Link to="/format">Click here</Link>
+        </b>{" "}
+        for more details reagrding the event.
       </p>
-        <p> In addition to this, everyone in the <b>top 100</b> will receive a <b>.co domain</b> of their choosing. Everyone in the <b>top 15</b> will also receive a <b>.us domain</b> along with their <b>.co domain.</b> Premium domains are not permitted.<br />
-          <i style={{ fontSize:'12px' }}>*prizes will be in the form of an Amazon gift card</i>
-        </p>
-      <h1>Members</h1>
-      <MemberLayout />
+      <h2>Prizes</h2>
+      <p>
+        <text>
+          <b>1st -</b> ₹20,000
+        </text>
+        <br />
+        <text>
+          <b>2nd -</b> ₹15,000
+        </text>
+        <br />
+        <text>
+          <b>3rd -</b> ₹10,000
+        </text>
+        <br />
+        <text>
+          <b>4th to 15th -</b> ₹1,000 each
+        </text>
+        <br />
+      </p>
+      <p>
+        In addition to this, everyone in the <b>top 100</b> will receive a{" "}
+        <b>.co domain</b> of their choosing. Everyone in the <b>top 15</b> will
+        also receive an <b>additional .us domain</b> along with their .co
+        domain. Premium domains are not permitted.
+      </p>
+      <h2>Members</h2>
+      <AboutContainer>
+        {Member.map(({ name, post, email }) => (
+          <AboutBox>
+            <Title>{name}</Title>
+            <info>
+              <main style={{ fontSize: "22px" }}>Organiser</main>
+              <i>{post}</i>
+              <a href={email}>
+                <ButtonContact>Contact</ButtonContact>
+              </a>
+            </info>
+          </AboutBox>
+        ))}
+      </AboutContainer>
     </About>
   </Layout>
 )

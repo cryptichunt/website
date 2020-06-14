@@ -1,46 +1,66 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Link } from 'gatsby'
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types"
+import React from "react"
+import styled from "styled-components"
+import { navigate } from "@reach/router"
 
-import Navbar from './navbar'
-
-// import logo from '../images/crypticlogo.svg'
-
-const Container = styled.header`
-  /* margin-bottom: 1rem; */
-`
+import IvyBanner from "../images/ivybanner.webp"
 
 const Logo = styled.img`
-  max-height: 8vh;
-  border-radius: 50%;
-  transform: translateX(-20%) translateY(30%);
+  width: 275px;
+  padding: 0 0 4.5em 0;
+  margin: 0;
+  &:hover {
+    transform: translateY(-2px);
+  }
+  @media screen and (max-width: 1440px) {
+    padding: 0;
+  }
+`
+
+const HeaderContent = styled.div`
+  padding: 0;
+  margin: 0;
+  display: block;
+  a {
+    text-decoration: none;
+  }
+`
+
+const Button = styled.button`
+  float: right;
+  background: #ee3769;
+  margin-top: 18px;
+  width: 7em;
+  color: #eee;
+  border-radius: 5px;
+  padding: 8px 15px;
+  border: solid #ee3769;
+  font-weight: 600;
+  box-shadow: 0px 8px 32px #ee376920;
+  font-size: 20px;
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0px 8px 32px #ee376970;
+    transform: translateY(-2px);
+  }
+  @media screen and (max-width: 960px) {
+    font-size: 18px;
+    position: absolute;
+    left: 10%;
+    margin-top: 5em;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+  }
 `
 
 const Header = ({ siteTitle }) => (
-  <Container>
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1rem 1.0875rem`,
-        display: `flex`,
-        alignItems: `center`,
-      }}
-    >
-      <Link
-        to="/"
-        style={{
-          color: `white`,
-          textDecoration: `none`,
-        }}
-      >
-        {/* {siteTitle} */}
-        {/* <Logo src={logo} alt="Cryptocracy" /> */}
-      </Link>
-      <Navbar />
-    </div>
-  </Container>
+  <HeaderContent>
+    <a href="https://www.ivyachievement.com/" target="_blank" rel="noreferrer">
+      <Logo src={IvyBanner} alt="IvyBanner" />
+    </a>
+    <Button onClick={() => navigate("/register")}>Register</Button>
+  </HeaderContent>
 )
 
 Header.propTypes = {

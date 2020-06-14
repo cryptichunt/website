@@ -1,11 +1,12 @@
 module.exports = {
   siteMetadata: {
     title: `Cryptocracy`,
-    description: `An online cryptic hunt conducted by a group of high-school students from the Delhi Tech Circuit. Join our official Discord server.`,
+    description: `An online cryptic hunt organised by high-school students from New Delhi, India.`,
     author: `@cryptocracy`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -18,16 +19,25 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Cryptocracy`,
-        short_name: `Cryptocracy`,
+        name: `gatsby-starter-default`,
+        short_name: `starter`,
         start_url: `/`,
-        background_color: `#2977f5`,
-        theme_color: `#2977f5`,
+        background_color: `#663399`,
+        theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/gatsby-icon.png`, 
       },
     },
-    `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Montserrat`,
+          `source sans pro\:400,500,600` // you can also specify font weights and styles
+        ],
+        display: 'swap'
+      }
+    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -36,8 +46,5 @@ module.exports = {
         defer: true,
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }

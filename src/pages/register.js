@@ -1,20 +1,18 @@
-import React from 'react'
-import { ToastProvider } from 'react-toast-notifications'
+import React from "react"
+import { ToastProvider } from "react-toast-notifications"
 
-import SEO from '../components/seo'
-import Layout from '../components/layout'
-import { Heading } from '../components/Home/Landing'
-import RegisterForm from '../components/Register/form'
+import SEO from "../components/seo"
+import Layout from "../components/layout"
+import RegisterForm from "../components/registerForm"
 
 const RegisterPage = () => {
   return (
-    <Layout>
+    <>
       <SEO title="Register" />
-      <Heading style={{ margin: '25px 0' }}>Register</Heading>
       <ToastProvider>
         <RegisterForm />
       </ToastProvider>
-    </Layout>
+    </>
   )
 }
 

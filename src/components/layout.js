@@ -1,66 +1,158 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { useStaticQuery, graphql, Link } from 'gatsby'
-import styled from 'styled-components'
+import React from "react"
+import PropTypes from "prop-types"
+import { useStaticQuery, graphql } from "gatsby"
+import styled from "styled-components"
+import { navigate } from "@reach/router"
 
-import Header from './header'
-import SocialItems from './socialItems'
+import Header from "./header"
+import "./layout.css"
+import Social from "../../data/socialLinks"
 
-import './fonts.css'
-import './layout.css'
-
-const navItems = [
-  {
-    title: 'Home',
-    href: '/',
-  },
-  {
-    title: 'Discord',
-    href: 'https://discord.com/invite/C5Y2CQ5',
-    external: true,
-  },
-  {
-    title: 'About',
-    href: '/about',
-  },
-  {
-    title: 'Register',
-    href: '/register',
-  },
-  {
-    title: 'Leaderboard',
-    href: '/leaderboard',
-  },
-  {
-    title: 'Format',
-    href: '/format',
-  },
-]
-
-const FooterLinks = styled.div`
-  font-size: 14px;
-  font-weight: bold;
-  text-transform: uppercase;
-
+const Content = styled.div`
+  margin: auto;
+  width: 70%;
+  padding-top: 15vh;
+  h1 {
+    font-weight: 700;
+    font-size: 60px;
+    color: #ee3769;
+    margin-top: 0;
+    white-space: nowrap;
+  }
+  h2 {
+    color: #ee3769;
+    margin-bottom: 48px;
+    font-size: 48px;
+  }
+  p {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    background-color: transparent;
+  }
+  b {
+    font-weight: 600;
+    color: #ee3769;
+  }
   a {
-    padding: 20px 15px 0 0;
-    /* color: #AEA79F; */
-    color: #D3D3D3;
     text-decoration: none;
+    color: inherit;
     display: inline-block;
   }
-
   a:hover {
-    transition: all 0.2s ease-in;
-    color: #000;
-    cursor: pointer;
+    transform: translateY(-2px);
   }
-
+  footer {
+    margin: 3em 0 1em 0;
+  }
+  @media screen and (max-width: 1440px) {
+    h1,
+    h2.abouttitle {
+      padding-top: 50px;
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    width: 80%;
+  }
+  @media screen and (max-width: 1080px) {
+    width: 90%;
+  }
+  @media screen and (max-width: 960px) {
+    padding-top: 10vh;
+    width: 80%;
+    h1,
+    h2.abouttitle {
+      padding-top: 1.75em;
+    }
+  }
   @media screen and (max-width: 768px) {
-    transform: translateY(125px);
-    padding-bottom: 30px;
+    h1 {
+      padding-top: 1.35em;
+    }
+    h2.abouttitle {
+      padding-top: 0;
+    }
+  }
+  @media screen and (max-width: 580px) {
+    h1 {
+      font-size: 48px;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+  @media screen and (max-width: 400px) {
+    h1 {
+      font-size: 38px;
+      padding-top: 2em;
+    }
+  }
+  @media screen and (max-width: 305px) {
+    h1 {
+      font-size: 32px;
+      padding-top: 2.75em;
+    }
+    h2 {
+      font-size: 24px;
+    }
+    h2.abouttitle {
+      padding-top: 2em;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+  @media screen and (max-width: 255px) {
+    h1 {
+      font-size: 28px;
+      padding-top: 3.75em;
+    }
+    h2 {
+      font-size: 24px;
+    }
+  }
+  @media screen and (max-width: 225px) {
+    h1 {
+      font-size: 24px;
+      padding-top: 4.75em;
+    }
+    h2.abouttitle {
+      font-size: 20px;
+      padding-top: 6em;
+    }
   }
 `
+
+const SocialItem = styled.a`
+  color: #eee;
+  text-decoration: none;
+  font-size: 28px;
+  margin-right: 1em;
+  @media screen and (max-width: 420px) {
+    margin-top: 12px;
+  }
+`
+
+const A = styled.div`
+  background-color: transparent;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 24px 24px 0 0;
+  display: inline-block;
+  font-weight: 500;
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+  }
+  @media screen and (max-width: 580px) {
+    font-size: 18px;
+  }
+  @media screen and (max-width: 305px) {
+    font-size: 16px;
+  }
+`
+
+const HeaderLinks = styled.div``
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -75,28 +167,37 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          <SocialItems />
-          <FooterLinks>
-            {navItems.map(item =>
-              item.external ? (
-                <a href={item.href}>{item.title}</a>
-              ) : (
-                <Link to={item.href}>{item.title}</Link>
-              )
-            )}
-          </FooterLinks>
-        </footer>
+      <style>
+        {" "}
+        @import
+        url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');{" "}
+      </style>
+      <div>
+        <main>
+          <Content>
+            <Header siteTitle={data.site.siteMetadata.title} />
+            {children}
+            <footer>
+              {Social.map(({ title, href, icon }) => (
+                <SocialItem
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer"
+                  alt={title}
+                  key={title}
+                >
+                  {icon}
+                </SocialItem>
+              ))}
+              <HeaderLinks>
+                <A onClick={() => navigate("/")}>Home</A>
+                <A onClick={() => navigate("/about")}>About</A>
+                <A onClick={() => navigate("/leaderboard")}>Leaderboard</A>
+                <A onClick={() => navigate("/format")}>Format</A>
+              </HeaderLinks>
+            </footer>
+          </Content>
+        </main>
       </div>
     </>
   )
