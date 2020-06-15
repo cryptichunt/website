@@ -1,12 +1,12 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-import styled from "styled-components"
-import { navigate } from "@reach/router"
+import React from 'react'
+import PropTypes from 'prop-types'
+import { useStaticQuery, graphql } from 'gatsby'
+import styled from 'styled-components'
+import { navigate } from '@reach/router'
 
-import Header from "./header"
-import "./layout.css"
-import Social from "../../data/socialLinks"
+import Header from './header'
+import './layout.css'
+import Social from '../../data/socialLinks'
 
 const Content = styled.div`
   margin: auto;
@@ -18,11 +18,6 @@ const Content = styled.div`
     color: #ee3769;
     margin-top: 0;
     white-space: nowrap;
-  }
-  h2 {
-    color: #ee3769;
-    margin-bottom: 48px;
-    font-size: 48px;
   }
   p {
     font-weight: 500;
@@ -45,12 +40,6 @@ const Content = styled.div`
   footer {
     margin: 3em 0 1em 0;
   }
-  @media screen and (max-width: 1440px) {
-    h1,
-    h2.abouttitle {
-      padding-top: 50px;
-    }
-  }
   @media screen and (max-width: 1200px) {
     width: 80%;
   }
@@ -60,18 +49,6 @@ const Content = styled.div`
   @media screen and (max-width: 960px) {
     padding-top: 10vh;
     width: 80%;
-    h1,
-    h2.abouttitle {
-      padding-top: 1.75em;
-    }
-  }
-  @media screen and (max-width: 768px) {
-    h1 {
-      padding-top: 1.35em;
-    }
-    h2.abouttitle {
-      padding-top: 0;
-    }
   }
   @media screen and (max-width: 580px) {
     h1 {
@@ -84,19 +61,11 @@ const Content = styled.div`
   @media screen and (max-width: 400px) {
     h1 {
       font-size: 38px;
-      padding-top: 2em;
     }
   }
   @media screen and (max-width: 305px) {
     h1 {
       font-size: 32px;
-      padding-top: 2.75em;
-    }
-    h2 {
-      font-size: 24px;
-    }
-    h2.abouttitle {
-      padding-top: 2em;
     }
     p {
       font-size: 16px;
@@ -105,20 +74,11 @@ const Content = styled.div`
   @media screen and (max-width: 255px) {
     h1 {
       font-size: 28px;
-      padding-top: 3.75em;
-    }
-    h2 {
-      font-size: 24px;
     }
   }
   @media screen and (max-width: 225px) {
     h1 {
       font-size: 24px;
-      padding-top: 4.75em;
-    }
-    h2.abouttitle {
-      font-size: 20px;
-      padding-top: 6em;
     }
   }
 `
@@ -168,9 +128,9 @@ const Layout = ({ children }) => {
   return (
     <>
       <style>
-        {" "}
+        {' '}
         @import
-        url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');{" "}
+        url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');{' '}
       </style>
       <div>
         <main>
@@ -190,10 +150,10 @@ const Layout = ({ children }) => {
                 </SocialItem>
               ))}
               <HeaderLinks>
-                <A onClick={() => navigate("/")}>Home</A>
-                <A onClick={() => navigate("/about")}>About</A>
-                <A onClick={() => navigate("/leaderboard")}>Leaderboard</A>
-                <A onClick={() => navigate("/format")}>Format</A>
+                <A onClick={() => navigate('/')}>Home</A>
+                <A onClick={() => navigate('/about')}>About</A>
+                <A onClick={() => navigate('/leaderboard')}>Leaderboard</A>
+                <A onClick={() => navigate('/format')}>Format</A>
               </HeaderLinks>
             </footer>
           </Content>

@@ -1,19 +1,15 @@
-import PropTypes from "prop-types"
-import React from "react"
-import styled from "styled-components"
-import { navigate } from "@reach/router"
+import PropTypes from 'prop-types'
+import React from 'react'
+import styled from 'styled-components'
+import { navigate } from '@reach/router'
 
-import IvyBanner from "../images/ivybanner.webp"
+import IvyBanner from '../images/ivybannercompressed.webp'
 
 const Logo = styled.img`
-  width: 275px;
   padding: 0 0 4.5em 0;
   margin: 0;
   &:hover {
     transform: translateY(-2px);
-  }
-  @media screen and (max-width: 1440px) {
-    padding: 0;
   }
 `
 
@@ -23,6 +19,18 @@ const HeaderContent = styled.div`
   display: block;
   a {
     text-decoration: none;
+  }
+  @media screen and (max-width: 960px) {
+    margin-bottom: 1em;
+  }
+  @media screen and (max-width: 305px) {
+    margin-bottom: 2em;
+  }
+  @media screen and (max-width: 255px) {
+    margin-bottom: 2.25em;
+  }
+  @media screen and (max-width: 225px) {
+    margin-bottom: 2.5em;
   }
 `
 
@@ -50,7 +58,11 @@ const Button = styled.button`
     margin-top: 5em;
   }
   @media screen and (max-width: 768px) {
+    margin-top: 6em;
     font-size: 16px;
+  }
+  @media screen and (max-width: 305px) {
+    margin-top: 5em;
   }
 `
 
@@ -59,7 +71,7 @@ const Header = ({ siteTitle }) => (
     <a href="https://www.ivyachievement.com/" target="_blank" rel="noreferrer">
       <Logo src={IvyBanner} alt="IvyBanner" />
     </a>
-    <Button onClick={() => navigate("/register")}>Register</Button>
+    <Button onClick={() => navigate('/register')}>Register</Button>
   </HeaderContent>
 )
 

@@ -1,10 +1,10 @@
-import React from "react"
-import { Link } from "gatsby"
-import styled from "styled-components"
+import React from 'react'
+import { Link } from 'gatsby'
+import styled from 'styled-components'
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Member from "../../data/memberInfo"
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import Member from '../../data/memberInfo'
 
 const AboutContainer = styled.div`
   display: flex;
@@ -27,7 +27,7 @@ const AboutBox = styled.div`
   &:hover {
     transform: translateY(-2px);
   }
-  info {
+  * {
     background-color: transparent;
   }
   main {
@@ -35,19 +35,10 @@ const AboutBox = styled.div`
   }
   i {
     font-size: 18px;
-    white-space: pre;
-    background-color: transparent;
   }
   main,
   i {
     display: inline;
-    background-color: transparent;
-  }
-  main::after,
-  i::after {
-    content: "";
-    white-space: pre;
-    display: block;
   }
 `
 
@@ -73,21 +64,13 @@ const ButtonContact = styled.button`
 const About = styled.div`
   padding: 0;
   margin: 0;
-  h2 {
-    margin-bottom: 24px;
-  }
-  @media screen and (max-width: 768px) {
-    h2.abouttitle {
-      margin-top: 2em;
-    }
-  }
 `
 
 const AboutPage = () => (
   <Layout>
     <About>
       <SEO title="About" />
-      <h2 class="abouttitle">About</h2>
+      <h1>About</h1>
       <p>
         A cryptic hunt is an online multiplayer event that involves players
         having to follow a trail of leads and clues to get to a question's
@@ -98,10 +81,10 @@ const AboutPage = () => (
       <p>
         <b>
           <Link to="/format">Click here</Link>
-        </b>{" "}
+        </b>{' '}
         for more details reagrding the event.
       </p>
-      <h2>Prizes</h2>
+      <h1>Prizes</h1>
       <p>
         <text>
           <b>1st -</b> ₹20,000
@@ -121,19 +104,20 @@ const AboutPage = () => (
         <br />
       </p>
       <p>
-        In addition to this, everyone in the <b>top 100</b> will receive a{" "}
+        In addition to this, everyone in the <b>top 100</b> will receive a{' '}
         <b>.co domain</b> of their choosing. Everyone in the <b>top 15</b> will
         also receive an <b>additional .us domain</b> along with their .co
         domain. Premium domains are not permitted.
       </p>
-      <h2>Members</h2>
+      <h1>Members</h1>
       <AboutContainer>
         {Member.map(({ name, post, email }) => (
           <AboutBox>
             <Title>{name}</Title>
             <info>
-              <main style={{ fontSize: "22px" }}>Organiser</main>
-              <i>{post}</i>
+              <main style={{ fontSize: '22px' }}>Organiser</main>
+              <br />
+              <i>{post}</i> <br />
               <a href={email}>
                 <ButtonContact>Contact</ButtonContact>
               </a>
