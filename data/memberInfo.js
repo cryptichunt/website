@@ -34,4 +34,9 @@ export default [
     post: "Herald",
     email: "mailto:tsonakya@protonmail.com",
   },
+  {
+  name: "Tanish Raju Paul",
+  post: "Watchman",
+  email: "dontcontact@fuckers.com"
+  }
 ]
