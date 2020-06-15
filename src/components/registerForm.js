@@ -1,13 +1,13 @@
-import React, { useState } from "react"
-import styled from "styled-components"
-import Recaptcha from "react-google-recaptcha"
-import Loader from "react-loader-spinner"
+import React, { useState } from 'react'
+import styled from 'styled-components'
+import Recaptcha from 'react-google-recaptcha'
+import Loader from 'react-loader-spinner'
 
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
-import { navigate } from "@reach/router"
-import { useForm } from "react-hook-form"
-import { useToasts } from "react-toast-notifications"
-import Layout from "./layout"
+import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
+import { navigate } from '@reach/router'
+import { useForm } from 'react-hook-form'
+import { useToasts } from 'react-toast-notifications'
+import Layout from './layout'
 
 const Form = styled.form`
   display: flex;
@@ -63,7 +63,7 @@ const Button = styled.button`
 const RegisterForm = () => {
   const { addToast } = useToasts()
   const { handleSubmit, register, errors } = useForm()
-  const [recaptcha, setRecaptcha] = useState("")
+  const [recaptcha, setRecaptcha] = useState('')
   const [submitting, setSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
 
@@ -74,10 +74,10 @@ const RegisterForm = () => {
     //const proxyURL = 'https://cors.someshkar.workers.dev/?'
     // console.log({...values, recaptchaResponse:recaptcha})
 
-    fetch("https://api.cryptichunt.com", {
-      method: "POST",
+    fetch('https://api.cryptichunt.com', {
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({ ...values, recaptchaResponse: recaptcha }),
     })
@@ -90,8 +90,8 @@ const RegisterForm = () => {
           autoDismissTimeout: 3200,
         })
 
-        if (res.status === "success") {
-          navigate("/success")
+        if (res.status === 'success') {
+          navigate('/success')
         } else {
           setSubmitting(false)
         }
@@ -106,7 +106,7 @@ const RegisterForm = () => {
           name="name"
           placeholder="Your name"
           ref={register({
-            required: "Required",
+            required: 'Required',
           })}
         />
         <Error>{errors.name && errors.name.message}</Error>
@@ -115,10 +115,10 @@ const RegisterForm = () => {
           name="username"
           placeholder="Username (no spaces)"
           ref={register({
-            required: "Required",
+            required: 'Required',
             pattern: {
               value: /^\S*$/,
-              message: "Invalid username (no spaces allowed)",
+              message: 'Invalid username (no spaces allowed)',
             },
           })}
         />
@@ -129,10 +129,10 @@ const RegisterForm = () => {
           placeholder="Email address"
           type="email"
           ref={register({
-            required: "Required",
+            required: 'Required',
             pattern: {
               value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-              message: "Invalid email address",
+              message: 'Invalid email address',
             },
           })}
         />
@@ -142,10 +142,10 @@ const RegisterForm = () => {
           name="discord"
           placeholder="Discord ID (username#tag)"
           ref={register({
-            required: "Required",
+            required: 'Required',
             pattern: {
               value: /^((.+?)#\d{4})/,
-              message: "Invalid Discord username",
+              message: 'Invalid Discord username',
             },
           })}
         />
@@ -163,7 +163,7 @@ const RegisterForm = () => {
           type="password"
           placeholder="Password"
           ref={register({
-            required: "Required",
+            required: 'Required',
           })}
         />
         <Error>{errors.password && errors.password.message}</Error>
@@ -178,27 +178,27 @@ const RegisterForm = () => {
           {errors.referralUsername && errors.referralUsername.message}
         </Error>
 
-        <text style={{ marginTop: "10px" }}>
+        <div style={{ marginTop: '10px' }}>
           <Recaptcha
             sitekey="6LcMqP4UAAAAAHPJgLnbWmMh1Y_dVSFgbTHTiT2K"
             onChange={val => setRecaptcha(val)}
             theme="dark"
           />
-        </text>
+        </div>
         <Button type="submit" onClick={() => setSubmitted(!submitted)}>
           {submitted ? (
             <Loader
               type="Bars"
               color="#EEE"
-              height={"20px"}
-              width={"20px"}
+              height={'20px'}
+              width={'20px'}
               style={{
-                marginTop: "8.5px",
-                backgroundColor: "transparent",
+                marginTop: '8.5px',
+                backgroundColor: 'transparent',
               }}
             />
           ) : (
-            "Submit"
+            'Submit'
           )}
         </Button>
       </Form>

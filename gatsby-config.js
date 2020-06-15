@@ -31,10 +31,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `Montserrat`,
-          `source sans pro\:400,500,600`, // you can also specify font weights and styles
-        ],
+        fonts: [`Montserrat`],
         display: 'swap',
       },
     },

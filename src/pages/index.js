@@ -1,8 +1,8 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from '../components/layout'
+import SEO from '../components/seo'
 
 const Discord = styled.div`
   top: 31vh;
@@ -17,6 +17,7 @@ const Discord = styled.div`
     margin: 25px 30px 20px 30px;
   }
   @media screen and (max-width: 1440px) {
+    top: 33vh;
     width: 350px;
   }
   @media screen and (max-width: 1200px) {
@@ -86,7 +87,7 @@ const IndexPage = () => (
         now!
       </p>
       <p>
-        Check out the{" "}
+        Check out the{' '}
         <b>
           <a
             href="https://www.instagram.com/p/CBWK36Hl995/?igshid=kws9jeec5w0j"
@@ -95,8 +96,8 @@ const IndexPage = () => (
           >
             prizes here!
           </a>
-        </b>{" "}
-        We are officialy sponsored by{" "}
+        </b>{' '}
+        We are officialy sponsored by{' '}
         <b>
           <a
             href="https://www.ivyachievement.com/"
@@ -114,10 +115,7 @@ const IndexPage = () => (
     <Discord>
       <Icon />
       <p>You're invited to join our Discord server!</p>
-      <p
-        class="info"
-        style={{ fontSize: "0.99em", opacity: "70%", marginTop: "0" }}
-      >
+      <p style={{ fontSize: '0.99em', opacity: '70%', marginTop: '0' }}>
         Join our Discord server! It's the place where we will be releasing
         hints, confirming leads, and posting all hunt related content. Some
         levels will require you to contact members of our team on Discord.

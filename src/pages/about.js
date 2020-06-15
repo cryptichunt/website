@@ -86,21 +86,13 @@ const AboutPage = () => (
       </p>
       <h1>Prizes</h1>
       <p>
-        <text>
-          <b>1st -</b> ₹20,000
-        </text>
+        <b>1st -</b> ₹20,000
         <br />
-        <text>
-          <b>2nd -</b> ₹15,000
-        </text>
+        <b>2nd -</b> ₹15,000
         <br />
-        <text>
-          <b>3rd -</b> ₹10,000
-        </text>
+        <b>3rd -</b> ₹10,000
         <br />
-        <text>
-          <b>4th to 15th -</b> ₹1,000 each
-        </text>
+        <b>4th to 15th -</b> ₹1,000 each
         <br />
       </p>
       <p>
@@ -112,16 +104,16 @@ const AboutPage = () => (
       <h1>Members</h1>
       <AboutContainer>
         {Member.map(({ name, post, email }) => (
-          <AboutBox>
+          <AboutBox key={name}>
             <Title>{name}</Title>
-            <info>
+            <div>
               <main style={{ fontSize: '22px' }}>Organiser</main>
               <br />
               <i>{post}</i> <br />
               <a href={email}>
                 <ButtonContact>Contact</ButtonContact>
               </a>
-            </info>
+            </div>
           </AboutBox>
         ))}
       </AboutContainer>

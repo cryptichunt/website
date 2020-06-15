@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react"
-import styled from "styled-components"
+import React, { useState, useEffect } from 'react'
+import styled from 'styled-components'
 
-import SEO from "../components/seo"
-import Layout from "../components/layout"
+import SEO from '../components/seo'
+import Layout from '../components/layout'
 
 const Leaderboard = styled.div`
   color: #eee;
@@ -21,7 +21,7 @@ const Table = styled.table`
 function LeaderboardLayout(props) {
   const [fetchedData, setFetchedData] = useState([])
   useEffect(() => {
-    fetch("https://api.cryptichunt.com/leaderboard")
+    fetch('https://api.cryptichunt.com/leaderboard')
       .then(resp => resp.json())
       .then(res => setFetchedData(res))
   }, [])
@@ -32,16 +32,22 @@ function LeaderboardLayout(props) {
         <h1>Leaderboard</h1>
         <p>Ctrl+F to search the registrations.</p>
         <Table>
-          <tr>
-            <th>USERNAME</th>
-            <th>SCORE</th>
-          </tr>
-          {fetchedData.map(({ username, points }) => (
+          <tbody>
             <tr>
-              <td style={{ fontWeight: "normal" }}>{username}</td>
-              <td style={{ fontWeight: "normal" }}>{points}</td>
+              <th>USERNAME</th>
+              <th>SCORE</th>
             </tr>
-          ))}
+            {fetchedData.map(({ username, points }) => (
+              <tr key={username}>
+                <td style={{ fontWeight: 'normal' }} key={username}>
+                  {username}
+                </td>
+                <td style={{ fontWeight: 'normal' }} key={points}>
+                  {points}
+                </td>
+              </tr>
+            ))}
+          </tbody>
         </Table>
       </Leaderboard>
     </Layout>

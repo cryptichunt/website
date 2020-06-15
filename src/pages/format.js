@@ -1,10 +1,10 @@
-import React from "react"
-import styled from "styled-components"
-import { Link } from "gatsby"
+import React from 'react'
+import styled from 'styled-components'
+import { Link } from 'gatsby'
 
-import terminalText from "../../data/terminalText"
-import SEO from "../components/seo"
-import "../components/layout.css"
+import terminalText from '../../data/terminalText'
+import SEO from '../components/seo'
+import '../components/layout.css'
 
 const Terminal = styled.div`
   margin: auto;
@@ -14,18 +14,19 @@ const Terminal = styled.div`
   @media screen and (max-width: 768px) {
     width: 75%;
   }
-  text {
+  div {
+    display: inline-block;
     font-size: 18px;
   }
 `
 
-const Tag = styled.text`
+const Tag = styled.div`
   color: #1793d1;
   font-weight: bold;
 `
 
 const Blinking = styled.span`
-  text.blinking {
+  div.blinking {
     animation: blinkingText 1.2s infinite;
   }
   @keyframes blinkingText {
@@ -56,28 +57,23 @@ const FormatLayout = () => (
     <SEO title="Rules & Format" />
     <Terminal>
       {terminalText.map(({ command, text, commandText, date }) => (
-        <div>
-          <p style={{ margin: "0" }}>
-            <Tag>[villager@archlinux ~]$ </Tag>
-            <text>{command}</text>
-            <br />
-          </p>
+        <div key={command}>
+          <Tag>[villager@archlinux ~]$ </Tag> {command}
+          <br />
           {commandText}
           {date}
-          <text>{text}</text>
+          {text}
         </div>
       ))}
-      <p style={{ margin: "0" }}>
-        <Tag>[villager@archlinux ~]$ </Tag>
-        <text>
-          <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
-            cd Home
-            <Blinking>
-              <text class="blinking">|</text>
-            </Blinking>
-          </Link>
-        </text>
-      </p>
+      <Tag>[villager@archlinux ~]$ </Tag>
+      <div>
+        <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+          cd Home
+          <Blinking>
+            <div className="blinking">|</div>
+          </Blinking>
+        </Link>
+      </div>
     </Terminal>
   </MainTerminal>
 )
