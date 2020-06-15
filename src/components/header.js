@@ -49,7 +49,7 @@ const Button = styled.button`
     font-size: 18px;
     position: absolute;
     left: 10%;
-    margin-top: 5em;
+    margin-top: 5.35em;
     padding: 8px 20px;
   }
   @media screen and (max-width: 768px) {

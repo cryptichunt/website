@@ -42,7 +42,7 @@ function LeaderboardLayout(props) {
                 <td style={{ fontWeight: 'normal' }} key={username}>
                   {username}
                 </td>
-                <td style={{ fontWeight: 'normal' }} key={points}>
+                <td style={{ fontWeight: 'normal' }} key={username}>
                   {points}
                 </td>
               </tr>

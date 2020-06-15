@@ -57,7 +57,7 @@ const FormatLayout = () => (
     <SEO title="Rules & Format" />
     <Terminal>
       {terminalText.map(({ command, text, commandText, date }) => (
-        <div key={command}>
+        <div key={command} style={{ display: 'block' }}>
           <Tag>[villager@archlinux ~]$ </Tag> {command}
           <br />
           {commandText}
@@ -65,8 +65,8 @@ const FormatLayout = () => (
           {text}
         </div>
       ))}
-      <Tag>[villager@archlinux ~]$ </Tag>
-      <div>
+      <div style={{ display: 'block' }}>
+        <Tag>[villager@archlinux ~]$ </Tag>{' '}
         <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
           cd Home
           <Blinking>

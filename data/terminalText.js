@@ -222,7 +222,8 @@ export default [
   {
     date: (
       <>
-        <div>Mon Jun 15 00:01:25 IST 2020</div> <br />
+        <div>Mon Jun 15 00:01:25 IST 2020</div>
+        <br />
       </>
     ),
     command: 'cat day-thirteen-rule.txt',
@@ -241,14 +242,31 @@ export default [
     ),
   },
   {
-    command: 'sudo cat day-fourteen-rule.txt',
-    commandText: (
-      <div>
-        [sudo] password for villager:
+    date: (
+      <>
+        <div>Tue Jun 16 00:02:17 IST 2020</div>
         <br />
+      </>
+    ),
+    command: 'cat day-fourteen-rule.txt',
+    text: (
+      <div>
+        The final tile will be directly related to the underlying story. It will
+        only be accessible once all other level tiles have been solved and story
+        tiles have been interacted with. Being the final tile in the innermost
+        square, it will reward the player with the maximum number of points,
+        however, the final level can only be solved by a single player.{' '}
       </div>
     ),
+  },
+  {
+    command: 'sudo cat levels.txt',
+    commandText: (
+      <>
+        <div style={{ display: 'block' }}>[sudo] password for villager:</div>
+      </>
+    ),
     text:
-      'cat: day-fourteen-rule.txt: No such file or directory. Check back tomorrow for the next bit of information.',
+      ' cat: levels.txt: No such file or directory. Check back on 19th June, 00:00:00 IST 2020 to participate in the event. Happy hunting!',
   },
 ]

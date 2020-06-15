@@ -120,7 +120,13 @@ const IndexPage = () => (
         hints, confirming leads, and posting all hunt related content. Some
         levels will require you to contact members of our team on Discord.
       </p>
-      <ButtonDiscord>Join Server</ButtonDiscord>
+      <a
+        href="https://discord.com/invite/C5Y2CQ5"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <ButtonDiscord>Join Server</ButtonDiscord>
+      </a>
     </Discord>
   </Layout>
 )
