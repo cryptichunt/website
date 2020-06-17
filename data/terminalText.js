@@ -260,6 +260,45 @@ export default [
     ),
   },
   {
+    date: (
+      <>
+        <div>Thu Jun 18 00:51:43 IST 2020</div>
+        <br />
+      </>
+    ),
+    command: 'cat bonus-rule.txt',
+    text: (
+      <div>
+        Cryptocracy Economy: The currency of cryptocracy is points. Your
+        objective is to get as many points as you can. The person with the
+        maximum points at the end of 48 hours will be declared winner.
+        <br /> The distribution of the points is as follows:-
+        <br /> Referral: +10
+        <br /> Outer Square Level: +500
+        <br /> Inner Square Level: +1000
+        <br /> Final Level: +3000 (Can only be solved by one player)
+        <br /> Hint Card: -125 (Has to be purchased from the shop)
+        <br /> Level Skip Card: -350 (Has to be purchased from the shop)
+        <br /> Jail: -125 (To get out of Jail)
+        <br /> Go Square- +200 x 5 (Will exhaust after completing 5 rounds
+        around the outer board)
+        <br />
+        Some other important "bits of information":-
+        <br /> 1) Each hint card will have a unique code. Participants have to
+        send this unique code to the admins to avail the hint.
+        <br /> 2) Participants can store multiple hint and level skip cards for
+        future use.
+        <br /> 3) Hints will be released if the admins feel that they are
+        necessity. For most levels participants will have to buy hint cards from
+        the shop.
+        <br /> 4) The leaderboard will show the bounty for each player at all
+        times.
+        <br /> 5) For the gate to enter the inner board to open you have to
+        complete all the levels in the outer board.
+      </div>
+    ),
+  },
+  {
     command: 'sudo cat levels.txt',
     commandText: (
       <>
