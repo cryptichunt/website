@@ -63,7 +63,7 @@ const Button = styled.button`
 
 const Header = ({ siteTitle }) => (
   <HeaderContent>
-    <a href="https://www.ivyachievement.com/" target="_blank" rel="noreferrer">
+    <a href="https://www.cryptichunt.com/">
       <Logo src={IvyBanner} alt="IvyBanner" />
     </a>
     <Button onClick={() => navigate('/register')}>Register</Button>
