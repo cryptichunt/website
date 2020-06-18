@@ -21,7 +21,7 @@ export default [
     ),
     command: 'cat day-one-rule.txt',
     text:
-      'Cryptocracy will start on the 19th of June at 12:00:00 AM IST and will end on 20th June at 11:59:59 PM IST.',
+      'Cryptocracy will start on the 19th of June at 12:00:00 PM IST and will end on 20th June at 11:59:59 PM IST.',
   },
   {
     date: (
@@ -297,13 +297,36 @@ export default [
     ),
   },
   {
-    command: 'sudo cat levels.txt',
+    command: 'sudo cat help.txt',
     commandText: (
       <>
         <div style={{ display: 'block' }}>[sudo] password for villager:</div>
       </>
     ),
+    text: (
+      <div>
+        The story can be found{' '}
+        <a
+          href="https://docs.google.com/document/d/1FalOU_hKzum3LV-BzHBJdcOwJf3FyjokUGe_p2TwL9k/edit?usp=sharing"
+          target="_blank"
+          rel="noreferrer"
+        >
+          here.
+        </a>
+        <br />A short TL;DR can be found{' '}
+        <a
+          href="https://docs.google.com/document/d/1RTzJZ3STnN9jAFJcM2CPBQxwLZbOxqyqdIKsHdEOkm0/edit?usp=sharing"
+          target="_blank"
+          rel="noreferrer"
+        >
+          here.
+        </a>
+      </div>
+    ),
+  },
+  {
+    command: 'sudo cat levels.txt',
     text:
-      ' cat: levels.txt: No such file or directory. Check back on 19th June, 00:00:00 IST 2020 to participate in the event. Happy hunting!',
+      ' cat: levels.txt: No such file or directory. Check back on 19th June, 12:00:00 PM IST 2020 to participate in the event. We sincerely apologize for the delay. Happy hunting!',
   },
 ]
