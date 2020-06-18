@@ -141,13 +141,14 @@ const RegisterForm = () => {
         <Input
           name="discord"
           placeholder="Discord ID (username#tag)"
-          ref={register({
-            required: 'Required',
-            pattern: {
-              value: /^((.+?)#\d{4})/,
-              message: 'Invalid Discord username',
-            },
-          })}
+          ref={register()}
+          // ref={register({
+          //  required: 'Required',
+          //  pattern: {
+          //    value: /^((.+?)#\d{4})/,
+          //    message: 'Invalid Discord username',
+          //  },
+          // })}
         />
         <Error>{errors.discord && errors.discord.message}</Error>
 
