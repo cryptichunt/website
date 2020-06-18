@@ -132,13 +132,13 @@ export default [
       <div>
         Teaming or forming alliances: now this has always been a controversial
         part of every hunt. In Cryptocracy, everyone is allowed to team up or
-        form an alliance, even though it's an individual hunt. Everyone can
-        "cheat". This doesn't mean that people can cheat so extensively that it
-        is apparent to the admins. There are two ways you can get banned - 1)
-        Your alliance gets noticed by us, or 2) If the participant(s) you are
-        teaming up with report you. The details of this reporting system will be
-        explained tomorrow. Also, you might've noticed that there was no
-        day-eight-rule.txt. Strange, isn't it?
+        form an alliance, even though it's an individual hunt. This doesn't mean
+        that people can cheat so extensively that it is apparent to the admins.
+        There are two ways you can get banned - 1) Your alliance gets noticed by
+        us, or 2) If the participant(s) you are teaming up with report you. The
+        details of this reporting system will be explained tomorrow. Also, you
+        might've noticed that there was no day-eight-rule.txt. Strange, isn't
+        it?
       </div>
     ),
   },
@@ -286,14 +286,12 @@ export default [
         Some other important "bits of information":-
         <br /> 1) Each hint card will have a unique code. Participants have to
         send this unique code to the admins to avail the hint.
-        <br /> 2) Participants can store multiple hint and level skip cards for
-        future use.
-        <br /> 3) Hints will be released if the admins feel that they are
+        <br /> 2) Hints will be released if the admins feel that they are
         necessity. For most levels participants will have to buy hint cards from
         the shop.
-        <br /> 4) The leaderboard will show the bounty for each player at all
+        <br /> 3) The leaderboard will show the bounty for each player at all
         times.
-        <br /> 5) For the gate to enter the inner board to open you have to
+        <br /> 4) For the gate to enter the inner board to open you have to
         complete all the levels in the outer board.
       </div>
     ),

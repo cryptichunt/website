@@ -104,7 +104,7 @@ const IndexPage = () => (
             target="_blank"
             rel="noreferrer"
           >
-            IvyAcheivement.
+            IvyAchievement.
           </a>
         </b>
       </p>
