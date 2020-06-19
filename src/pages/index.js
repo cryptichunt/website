@@ -109,8 +109,8 @@ const IndexPage = () => (
         </b>
       </p>
       <p>
-        <b>Dates:</b> 19th - 21st June, 2020. The hunt will start on 19th June
-        12:00 PM IST and will end on 21st June 12:00 PM IST.
+        <b>Dates:</b> The updated dates will be revealed soon. Stay up to date
+        by joining our Discord server.
       </p>
     </MainText>
     <Discord>

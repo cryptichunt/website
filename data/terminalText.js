@@ -21,7 +21,7 @@ export default [
     ),
     command: 'cat day-one-rule.txt',
     text:
-      'Cryptocracy will start on the 19th of June at 12:00:00 PM IST and will end on 21st June at 12:00:00 PM IST.',
+      'The dates of the hunt have been changed due to technical problems and will be revealed shortly. Till then, join our Discord server to stay updated.',
   },
   {
     date: (
@@ -327,6 +327,6 @@ export default [
   {
     command: 'sudo cat levels.txt',
     text:
-      ' cat: levels.txt: No such file or directory. Check back on 19th June, 12:00:00 PM IST 2020 to participate in the event. We sincerely apologize for the delay. Happy hunting!',
+      ' cat: levels.txt: No such file or directory. Check back again soon for details regarding the dates and the timings of the hunt. We sincerely apologize for the delay. Join our Discord server to stay updated. Happy hunting!',
   },
 ]
