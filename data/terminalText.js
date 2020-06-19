@@ -21,7 +21,7 @@ export default [
     ),
     command: 'cat day-one-rule.txt',
     text:
-      'Cryptocracy will start on the 19th of June at 12:00:00 PM IST and will end on 20th June at 11:59:59 PM IST.',
+      'Cryptocracy will start on the 19th of June at 12:00:00 PM IST and will end on 21st June at 12:00:00 PM IST.',
   },
   {
     date: (

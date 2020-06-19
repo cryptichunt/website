@@ -109,10 +109,9 @@ const IndexPage = () => (
         </b>
       </p>
       <p>
-        <b>Dates:</b> 19th - 20th June, 2020. The hunt will start on 19th June
-        12:00 PM IST.
+        <b>Dates:</b> 19th - 21st June, 2020. The hunt will start on 19th June
+        12:00 PM IST and will end on 21st June 12:00 PM IST.
       </p>
-      <p>We apologize for the delay in the hunt.</p>
     </MainText>
     <Discord>
       <Icon />
