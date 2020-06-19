@@ -109,8 +109,7 @@ const IndexPage = () => (
         </b>
       </p>
       <p>
-        <b>Dates:</b> The updated dates will be revealed soon. Stay up to date
-        by joining our Discord server.
+        <b>Dates:</b> 26th June 12:00 AM IST - 27th June 11:59 PM IST 2020.
       </p>
     </MainText>
     <Discord>

@@ -21,7 +21,7 @@ export default [
     ),
     command: 'cat day-one-rule.txt',
     text:
-      'The dates of the hunt have been changed due to technical problems and will be revealed shortly. Till then, join our Discord server to stay updated.',
+      'The hunt will be held from 26th June 12:00 AM IST to 27th June 11:59 PM IST 2020. Till then, join our Discord server to stay updated.',
   },
   {
     date: (
@@ -327,6 +327,6 @@ export default [
   {
     command: 'sudo cat levels.txt',
     text:
-      ' cat: levels.txt: No such file or directory. Check back again soon for details regarding the dates and the timings of the hunt. We sincerely apologize for the delay. Join our Discord server to stay updated. Happy hunting!',
+      ' cat: levels.txt: No such file or directory. Check back again on 26th June 12:00 AM IST 2020. We sincerely apologize for the delay. Join our Discord server to stay updated. Happy hunting!',
   },
 ]
