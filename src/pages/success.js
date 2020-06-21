@@ -18,7 +18,7 @@ const NotFoundPage = () => (
     <SEO title="Registration Successful" />
     <h1 style={{ whiteSpace: 'normal' }}>Thank you for registering!</h1>
     <p>
-      The hunt is on <b>19th - 20th June 2020.</b> Till then, do{' '}
+      The hunt is on <b>26th - 27th June 2020.</b> Till then, do{' '}
       <a
         href="https://discord.com/invite/C5Y2CQ5"
         target="_blank"
