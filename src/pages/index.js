@@ -81,6 +81,19 @@ const IndexPage = () => (
     <SEO title="Home" />
     <h1>Cryptocracy</h1>
     <MainText>
+      <p>
+        The hunt is now live! Click{' '}
+        <b>
+          <a
+            href="https://play.cryptichunt.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            here
+          </a>
+        </b>{' '}
+        to play!
+      </p>
       <p>A cryptic hunt organised by high school students from Delhi.</p>
       <p>
         Join our Discord to stay updated. Registrations are now live, register

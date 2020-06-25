@@ -326,7 +326,13 @@ export default [
   },
   {
     command: 'sudo cat levels.txt',
-    text:
-      ' cat: levels.txt: No such file or directory. Check back again on 26th June 12:00 AM IST 2020. We sincerely apologize for the delay. Join our Discord server to stay updated. Happy hunting!',
+    text: (
+      <div>
+        The hunt is now live! Play{' '}
+        <a href="https://play.cryptichunt.com" target="_blank" rel="noreferrer">
+          here.
+        </a>
+      </div>
+    ),
   },
 ]

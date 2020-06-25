@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import styled from 'styled-components'
-import { navigate } from '@reach/router'
 
 import IvyBanner from '../images/ivybannercompressed.webp'
 
@@ -66,7 +65,11 @@ const Header = ({ siteTitle }) => (
     <a href="https://www.cryptichunt.com/">
       <Logo src={IvyBanner} alt="IvyBanner" />
     </a>
-    <Button onClick={() => navigate('/register')}>Register</Button>
+    <Button>
+      <a href="https://play.cryptichunt.com" target="_blank" rel="noreferrer">
+        Play
+      </a>
+    </Button>
   </HeaderContent>
 )
 

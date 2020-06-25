@@ -112,7 +112,26 @@ const A = styled.div`
   }
 `
 
-const HeaderLinks = styled.div``
+const HeaderLinks = styled.div`
+  a {
+    background-color: transparent;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 24px 24px 0 0;
+    display: inline-block;
+    font-weight: 500;
+    &:hover {
+      cursor: pointer;
+      transform: translateY(-2px);
+    }
+    @media screen and (max-width: 580px) {
+      font-size: 18px;
+    }
+    @media screen and (max-width: 305px) {
+      font-size: 16px;
+    }
+  }
+`
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -147,8 +166,13 @@ const Layout = ({ children }) => {
               <HeaderLinks>
                 <A onClick={() => navigate('/')}>Home</A>
                 <A onClick={() => navigate('/about')}>About</A>
-                <A onClick={() => navigate('/leaderboard')}>Leaderboard</A>
-                <A onClick={() => navigate('/format')}>Format</A>
+                <a
+                  href="https://play.cryptichunt.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Play
+                </a>
               </HeaderLinks>
             </footer>
           </Content>
