@@ -81,24 +81,7 @@ const IndexPage = () => (
     <SEO title="Home" />
     <h1>Cryptocracy</h1>
     <MainText>
-      <p>
-        The hunt is now live! Click{' '}
-        <b>
-          <a
-            href="https://play.cryptichunt.com"
-            target="_blank"
-            rel="noreferrer"
-          >
-            here
-          </a>
-        </b>{' '}
-        to play!
-      </p>
       <p>A cryptic hunt organised by high school students from Delhi.</p>
-      <p>
-        Join our Discord to stay updated. Registrations are now live, register
-        now!
-      </p>
       <p>
         Check out the{' '}
         <b>
@@ -110,7 +93,7 @@ const IndexPage = () => (
             prizes here!
           </a>
         </b>{' '}
-        We are officialy sponsored by{' '}
+        We are officially sponsored by{' '}
         <b>
           <a
             href="https://www.ivyachievement.com/"
@@ -122,7 +105,14 @@ const IndexPage = () => (
         </b>
       </p>
       <p>
-        <b>Dates:</b> 26th June 12:00 AM IST - 27th June 11:59 PM IST 2020.
+        The hunt was held on 26th June 12:00 AM IST - 27th June 11:59 PM IST
+        2020.
+      </p>
+      <p>
+        <b>
+          <a href="/leaderboard">Click here</a>
+        </b>{' '}
+        to view the results.
       </p>
     </MainText>
     <Discord>

@@ -166,13 +166,7 @@ const Layout = ({ children }) => {
               <HeaderLinks>
                 <A onClick={() => navigate('/')}>Home</A>
                 <A onClick={() => navigate('/about')}>About</A>
-                <a
-                  href="https://play.cryptichunt.com"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Play
-                </a>
+                <A onClick={() => navigate('/leaderboard')}>Leaderboard</A>
               </HeaderLinks>
             </footer>
           </Content>

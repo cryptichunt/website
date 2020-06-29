@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import styled from 'styled-components'
+// import { Link } from 'gatsby'
+import { navigate } from '@reach/router'
 
 import IvyBanner from '../images/ivybannercompressed.webp'
 
@@ -62,14 +64,10 @@ const Button = styled.button`
 
 const Header = ({ siteTitle }) => (
   <HeaderContent>
-    <a href="https://www.cryptichunt.com/">
+    <a href="/">
       <Logo src={IvyBanner} alt="IvyBanner" />
     </a>
-    <Button>
-      <a href="https://play.cryptichunt.com" target="_blank" rel="noreferrer">
-        Play
-      </a>
-    </Button>
+    <Button onClick={() => navigate('/leaderboard')}>Leaderboard</Button>
   </HeaderContent>
 )
 
