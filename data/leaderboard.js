@@ -42,7 +42,6 @@ export default [
   '3.14159',
   'AlphaQ',
   'mk',
-  'Divyansh',
   'Hackerb0ne',
   'adi',
   'Bhavye27',
